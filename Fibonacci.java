@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.InputMismatchException;
   public class Fibonacci {
     public static void main(String[] args) { 
       System.out.println("Enter an integer : "); 
