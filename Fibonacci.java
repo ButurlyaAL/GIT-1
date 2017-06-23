@@ -17,5 +17,4 @@ import java.util.InputMismatchException;
         System.out.println("It is not integer!!!Try again.");
       }
     }
-  }
-      
+  }    
