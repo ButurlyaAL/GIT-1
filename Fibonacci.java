@@ -6,9 +6,9 @@ public class Fibonacci {
     double number = input.nextDouble(); 
     double number_sqrt_1 = Math.sqrt(number * number * 5 - 4),number_sqrt_2 = Math.sqrt(number * number * 5 + 4);
     if ((number_sqrt_1 % 1 == 0 || number_sqrt_2 % 1 == 0) && number >= 0)  {
-      System.out.println("It is Fibonacci number");
+      System.out.println("It is non-negative Fibonacci number");
     } else {
-      System.out.println("It is not Fibonacci number");
+      System.out.println("It is not non-negative Fibonacci number");
     }
   } 
 }      
