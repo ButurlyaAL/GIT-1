@@ -11,5 +11,4 @@ public class Fibonacci {
       System.out.println("It is not Fibonacci number");
     }
   } 
-}
-      
+}      
