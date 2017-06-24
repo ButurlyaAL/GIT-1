@@ -7,7 +7,6 @@ public class Fibonacci {
     int number = input.nextInt();
     while(number < 0) {
       System.out.println("Wrong!!!(Your number is negative)Try again :");
-      
       number = input.nextInt();
     }
     int n = 100;
