@@ -5,7 +5,7 @@ public class Fibonacci {
     System.out.println("Enter an integer : ");
     Scanner input = new Scanner(System.in);
     int number = input.nextInt();
-    while(number < 0) {
+    while (number < 0) {
       /*if the number is negative
         request to enter again*/ 
       System.out.println("Wrong!!!(Your number is negative)Try again :");
@@ -15,8 +15,8 @@ public class Fibonacci {
     int iteration = 0;
     int currentCount = 0;
     int nextCount = 1;
-    while(iteration < n) {
-      if(currentCount == number) {
+    while (iteration < n) {
+      if (currentCount == number) {
         /*if we have concidence:
           it is Fibonacci number*/
         System.out.println("It is non-negative Fibonacci number");
