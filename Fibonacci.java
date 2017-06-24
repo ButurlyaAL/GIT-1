@@ -14,7 +14,7 @@ public class Fibonacci {
     int currentCount = 0;
     int nextCount = 1;
     while(iteration < n) {
-      if(currentCount == number && number >= 0) {
+      if(currentCount == number) {
         System.out.println("It is non-negative Fibonacci number");
         break;
       }
