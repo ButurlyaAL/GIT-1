@@ -11,7 +11,7 @@ public class Sequence {
     }
     for (int index = 0; index < sequence.size() - 1; index ++) {                 
       if (sequence.get(index + 1) < sequence.get(index)) {
-        System.out.println("It is not non-decreasing sequence");
+        System.out.println("It is NOT non-decreasing sequence");
         break;
       } else if (index == sequence.size() -2) {
         System.out.println("It is non-decreasing sequence");
