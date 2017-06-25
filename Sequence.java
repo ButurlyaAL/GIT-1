@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Sequence {
   public static void main(String[] args) { 
     Scanner input = new Scanner(System.in);
-    System.out.println("Enter an integer sequence(without blancs : ");
+    System.out.println("Enter an integer sequence(without blancs) : ");
     String sequence = input.nextLine();
     int currentElement;
     int nextElement;
@@ -11,10 +11,10 @@ public class Sequence {
       currentElement = Integer.valueOf(sequence.charAt(index));
       nextElement = Integer.valueOf(sequence.charAt(index + 1));
       if (nextElement < currentElement) {
-        System.out.println("It is NOT non-decreasung sequence");
+        System.out.println("It is NOT non-decreasing sequence");
         break;
       } else if (index == sequence.length() - 2) {
-        System.out.println("It is non-decreasung sequence");
+        System.out.println("It is non-decreasing sequence");
       }     
     }  
   }
