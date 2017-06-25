@@ -3,17 +3,17 @@ import java.util.ArrayList;
 
 public class Sequence {
   public static void main(String[] args) { 
+    Scanner input = new Scanner(System.in);
     System.out.println("Enter an integer sequence(If you have finished ,press any letter) : ");
     ArrayList<Integer> sequence = new ArrayList<Integer>();
-    Scanner input = new Scanner(System.in);
-    while (input.hasNextInt() == true) {
+    while (input.hasNextInt()) {
       sequence.add(input.nextInt());    
     }
-    for (int element = 0; element < sequence.size() - 1; element ++) {                 
-      if (sequence.get(element + 1) < sequence.get(element)) {
+    for (int index = 0; index < sequence.size() - 1; index ++) {                 
+      if (sequence.get(index + 1) < sequence.get(index)) {
         System.out.println("It is not non-decreasing sequence");
         break;
-      } else if (element == sequence.size() -2) {
+      } else if (index == sequence.size() -2) {
         System.out.println("It is non-decreasing sequence");
       }
     }
