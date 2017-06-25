@@ -6,10 +6,7 @@ public class Sequence {
     System.out.println("Enter an integer sequence(If you have finished ,press any letter) : ");
     ArrayList<Integer> sequence = new ArrayList<Integer>();
     Scanner input = new Scanner(System.in);
-    while (true) {
-      if (input.hasNextInt() == false) {
-        break;
-      }
+    while (input.hasNextInt() == true) {
       sequence.add(input.nextInt());    
     }
     for (int element = 0; element < sequence.size() - 1; element ++) {                 
