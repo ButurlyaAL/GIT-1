@@ -1,21 +1,23 @@
 import java.util.Scanner;
 
 public class Sequence {
-  public static void main(String[] args) { 
+  public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
-    System.out.println("Enter an integer sequence(without blancs) : ");
-    String sequence = input.nextLine();
-    int currentElement;
-    int nextElement;
-    for (int index = 0; index < sequence.length() - 1; index ++) {
-      currentElement = Integer.valueOf(sequence.charAt(index));
-      nextElement = Integer.valueOf(sequence.charAt(index + 1));
-      if (nextElement < currentElement) {
-        System.out.println("It is NOT non-decreasing sequence");
-        break;
-      } else if (index == sequence.length() - 2) {
-        System.out.println("It is non-decreasing sequence");
-      }     
-    }  
+    System.out.println("Enter an INTEGER sequence(If you have finished, please press any letter) : ");
+    boolean check = false;
+    int currentElement = 0;
+    int previousElement = 0;
+    while (input.hasNextInt()) {
+      currentNum = input.nextInt();
+      if (currentNum < previousNum) {
+        check = true;
+      }
+    previousNum = currentNum;
+    }
+    if (input.hasNextLine() && check == false) {
+		  System.out.println("It is non-decreasing sequence.");
+    } else if (input.hasNextLine() && check) {
+      System.out.println("it is NOT non-decreasing sequence");
+    }
   }
 }
