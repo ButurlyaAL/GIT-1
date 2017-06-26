@@ -9,10 +9,10 @@ public class Sequence {
     int previousElement = 0;
     while (input.hasNextInt()) {
       currentNum = input.nextInt();
-      if (currentNum < previousNum) {
+      if (currentElement < previousElement && previousElement != 0) {
         check = true;
       }
-    previousNum = currentNum;
+    previousElement = currentElement;
     }
     if (input.hasNextLine() && check == false) {
       System.out.println("It is non-decreasing sequence.");
