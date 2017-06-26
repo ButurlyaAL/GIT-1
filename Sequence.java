@@ -15,7 +15,7 @@ public class Sequence {
     previousNum = currentNum;
     }
     if (input.hasNextLine() && check == false) {
-		  System.out.println("It is non-decreasing sequence.");
+      System.out.println("It is non-decreasing sequence.");
     } else if (input.hasNextLine() && check) {
       System.out.println("it is NOT non-decreasing sequence");
     }
