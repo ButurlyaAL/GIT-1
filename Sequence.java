@@ -8,16 +8,16 @@ public class Sequence {
     int previousNum = 0;
     String result = "";
     while (input.hasNextInt()) {
-    currentNum = input.nextInt();
-    if (currentElement < previousElement && previousElement != 0) {
-      result = "It is NOT non-decreasing sequence.";
-      break;
-    } else {
-      previousElement = currentElement;
-    }
-    if (input.hasNextLine()) 
-      result = "It is non-decreasing sequence.";
-    }
+      currentNum = input.nextInt();
+      if (currentElement < previousElement && previousElement != 0) {
+        result = "It is NOT non-decreasing sequence.";
+        break;
+      } else {
+        previousElement = currentElement;
+      }
+      if (input.hasNextLine()) 
+        result = "It is non-decreasing sequence.";
+      }
     }
     System.out.println(result);
 }
