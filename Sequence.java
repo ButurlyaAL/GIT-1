@@ -6,17 +6,15 @@ public class Sequence {
     System.out.println("Enter an INTEGER sequence(use spaces(If you have finished, please press ENTER)) : ");
     int currentNum = 0;
     int previousNum = 0;
-    String result = "";
     while (input.hasNextInt()) {
-      currentNum = input.nextInt();
+      currentElement = input.nextInt();
       if (currentElement < previousElement && previousElement != 0) {
-        result = "It is NOT non-decreasing sequence.";
-        break;
+        Sysem.out.println("It is NOT non-decreasing sequence.");
+        return;
       } else {
         previousElement = currentElement;
       }
-      if (input.hasNextLine()) 
-        result = "It is non-decreasing sequence.";
+      System.out.println("It is non-decreasing sequence.");
       }
     }
     System.out.println(result);
