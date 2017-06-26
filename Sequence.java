@@ -12,7 +12,7 @@ public class Sequence {
       if (currentElement < previousElement && previousElement != 0) {
         check ++;
       }
-    previousElement = currentElement;
+     previousElement = currentElement;
     }
     if (input.hasNextLine() && check == 0) {
       System.out.println("It is non-decreasing sequence.");
