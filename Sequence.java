@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Sequence {
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
-    System.out.println("Enter an INTEGER sequence(use spaces(If you have finished, please press ENTER and any letter)) : ");
+    System.out.println("Enter an INTEGER sequence(use spaces(If you have finished,press ENTER)):");
     int currentElement = 0;
     int previousElement = 0;
     while (input.hasNextInt()) {
