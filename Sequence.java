@@ -14,7 +14,7 @@ public class Sequence {
     }
     while (input.hasNextInt()) {
       currentElement = input.nextInt();
-      if (currentElement < previousElement && previousElement != 0) {
+      if (currentElement < previousElement) {
         System.out.println("It is NOT non-decreasing sequence.");
         return;
       } else {
