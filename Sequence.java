@@ -7,7 +7,7 @@ public class Sequence {
     int currentElement = 0;
     int previousElement = 0;
     try {
-      previousNum = input.nextInt();
+      previousElement = input.nextInt();
     } catch (Exception e) {
       System.out.println("It's NOT integer value. Please try again.");
       return;
