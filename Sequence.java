@@ -10,6 +10,7 @@ public class Sequence {
       previousElement = input.nextInt();
     } catch (Exception e) {
       System.out.println("It's NOT integer value. Please try again.");
+      return;
     }
     while (input.hasNextInt()) {
       currentElement = input.nextInt();
