@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Sequence {
   public static void main(String[] args) {
-    if(args.length == 0) {
+    if (args.length == 0) {
       consoleInput();  
     } else { 
       int i = 0; 
@@ -38,9 +38,4 @@ public class Sequence {
     }
     System.out.println("It is non-decreasing sequence.");
   }
-}  
-   
-     
-     
-           
-      
+}      
