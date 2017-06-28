@@ -4,14 +4,12 @@ public class Sequence {
   public static void main(String[] args) {
     if (args.length == 0) {
       consoleInput();  
-    } else { 
-      int i = 0; 
-      while (i < args.length - 1) {
+    } else {  
+      for (int i = 0; i < args.length - 1; i ++) {
         if (Integer.valueOf(args[i + 1]) < Integer.valueOf(args[i])) {
           System.out.println("It is NOT non-decreasing sequence.");
           return;
         }
-        i++;
       }
       System.out.println("It is non-decreasing sequence.");               
     }
