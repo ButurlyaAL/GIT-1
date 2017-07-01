@@ -8,7 +8,7 @@ public class Checker {
    *@numbers is the sequence to be checked
    *@return a boolean value
    */
-  public boolean checking(String[] sequence) {
+  public boolean check(String[] sequence) {
     for (int i = 0; i < sequence.length - 1; i ++) {
       if (Integer.valueOf(sequence[i + 1]) < Integer.valueOf(sequence[i])) {
         return true;
