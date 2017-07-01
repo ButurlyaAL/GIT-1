@@ -6,7 +6,7 @@ public class Sequence {
     boolean check;
     if (args.length == 0) {
       ConsoleReader consoleReader = new ConsoleReader();
-      check = checker.checking(consoleReader.reading());
+      check = checker.checking(consoleReader.getSequence());
     } else { 
       check = checker.checking(args);  
     }
