@@ -17,6 +17,11 @@ public class Sequence {
     } else {
       System.out.println("It is non-decreasing sequence.");
   }
+    /**
+     *returns a boolean value that determines the type of the sequence
+     *@numbers is the sequence to be checked
+     *@return a boolean value
+     */
   public static boolean checking(String[] numbers) { 
     for (int i = 0; i < numbers.length - 1; i ++) {
       if (Integer.valueOf(numbers[i + 1]) < Integer.valueOf(numbers[i])) {
