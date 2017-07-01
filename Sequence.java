@@ -2,23 +2,27 @@ import java.util.Scanner;
 
 public class Sequence {
   public static void main(String[] args) {
+    boolean a;
     if (args.length == 0) {
       Scanner input = new Scanner(System.in);
       System.out.println("Enter an INTEGER sequence(use spaces(If you have finished,press ENTER)):");
       String line = input.nextLine();
       String[] sequence = line.split(" ");
-      checking(sequence);
+      a = checking(sequence);
     } else { 
-      checking(args);
+      a = checking(args);  
     }
+    if (a) {
+    System.out.println("It is NOT non-decreasing sequence.");
+    } else {
+      System.out.println("It is non-decreasing sequence.");
   }
-  public static void checking(String[] numbers) { 
+  public static boolean checking(String[] numbers) { 
     for (int i = 0; i < numbers.length - 1; i ++) {
       if (Integer.valueOf(numbers[i + 1]) < Integer.valueOf(numbers[i])) {
-        System.out.println("It is NOT non-decreasing sequence.");
-        return;
+        return true;
       }
     }
-    System.out.println("It is non-decreasing sequence.");               
+    return false;               
   }
 }
