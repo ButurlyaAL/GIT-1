@@ -2,15 +2,15 @@ import java.util.Scanner;
 
 public class Sequence {
   public static void main(String[] args) {
-    boolean a;
+    boolean check;
     if (args.length == 0) {
       Scanner input = new Scanner(System.in);
       System.out.println("Enter an INTEGER sequence(use spaces(If you have finished,press ENTER)):");
       String line = input.nextLine();
       String[] sequence = line.split(" ");
-      a = checking(sequence);
+      check = checking(sequence);
     } else { 
-      a = checking(args);  
+      check = checking(args);  
     }
     if (a) {
     System.out.println("It is NOT non-decreasing sequence.");
