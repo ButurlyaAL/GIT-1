@@ -12,5 +12,4 @@ public class ConsoleReader {
     String[] sequence = line.split(" ");
     return sequence;
   }
-}
-  
+}  
