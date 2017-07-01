@@ -18,7 +18,8 @@ public class Sequence {
       System.out.println("It is non-decreasing sequence.");
   }
     /**
-     *returns a boolean value that determines the type of the sequence
+     *returns a boolean value,
+     *which determines that the sequence is non-decreasing or not.
      *@numbers is the sequence to be checked
      *@return a boolean value
      */
