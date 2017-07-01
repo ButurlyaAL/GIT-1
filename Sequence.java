@@ -1,26 +1,25 @@
-import java.util.Scanner;
-
 public class Sequence {
   public static void main(String[] args) {
-    Scanner input = new Scanner(System.in);
-    System.out.println("Enter an INTEGER sequence(use spaces(If you have finished,press ENTER)):");
-    int currentElement = 0;
-    int previousElement = 0;
-    try {
-      previousElement = input.nextInt();
-    } catch (Exception e) {
-      System.out.println("It's NOT integer value. Please try again.");
-      return;
+    Checker checker = new Checker();
+    boolean check;
+    if (args.length == 0) {
+      ConsoleReader consoleReader = new ConsoleReader();
+      check = checker.checking(consoleReader.reading());
+    } else { 
+      check = checker.checking(args);  
     }
-    while (input.hasNextInt()) {
-      currentElement = input.nextInt();
-      if (currentElement < previousElement) {
-        System.out.println("It is NOT non-decreasing sequence.");
-        return;
-      } else {
-        previousElement = currentElement;
-      }
+    if (check) {
+    System.out.println("It is NOT non-decreasing sequence.");
+    } else {
+      System.out.println("It is non-decreasing sequence.");
     }
-    System.out.println("It is non-decreasing sequence.");
   }
-}
+} 
+
+  
+  
+   
+     
+     
+           
+      
