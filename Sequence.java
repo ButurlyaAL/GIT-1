@@ -12,7 +12,7 @@ public class Sequence {
     } else { 
       check = checking(args);  
     }
-    if (a) {
+    if (check) {
     System.out.println("It is NOT non-decreasing sequence.");
     } else {
       System.out.println("It is non-decreasing sequence.");
