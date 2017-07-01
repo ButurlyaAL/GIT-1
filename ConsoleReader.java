@@ -14,7 +14,7 @@ public class ConsoleReader {
     line = input.nextLine();
   }
   /**
-   *returns String array,
+   *Returns String array,
    *which consists of the numbers(in the string representation) entered by the user
    *@return String array
    */
