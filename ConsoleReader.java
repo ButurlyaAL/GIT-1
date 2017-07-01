@@ -10,15 +10,15 @@ public class ConsoleReader {
    */
   public ConsoleReader() {
     input = new Scanner(System.in);
-    System.out.println("Enter an INTEGER sequence(use spaces(If you have finished,press ENTER)):"); 
+    System.out.println("Enter an INTEGER sequence(use spaces(If you have finished,press ENTER)):");
+    line = input.nextLine();
   }
   /**
    *returns String array,
    *which consists of the numbers(in the string representation) entered by the user
    *@return String array
    */
-  public String[] reading() {
-    line = input.nextLine();
+  public String[] getSequence() {
     String[] sequence = line.split(" ");
     return sequence;
   }
