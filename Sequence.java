@@ -37,3 +37,4 @@ public class Sequence {
       System.out.println("It is non-decreasing sequence.");
     }
   }
+}
