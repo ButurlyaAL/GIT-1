@@ -28,7 +28,7 @@ public class Sequence {
   }
  /**
   *Prints what sequence is.
-  *@resultOfCheck is boolean value,which is the result of verification of sequence.
+  *@resultOfCheck is a boolean value,which is the result of verification of sequence.
   */
   public static void printResultOfCheck(boolean resultOfCheck) {
      if (resultOfCheck) {
