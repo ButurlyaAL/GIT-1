@@ -6,9 +6,19 @@ public class Sequence {
     Checker checker = new Checker();
     if (args.length == 0) {
       ConsoleReader consoleReader = new ConsoleReader();
-      checker.printResultOfCheck(checker.check(consoleReader.getSequence()));
+      printResultOfCheck(checker.check(consoleReader.getSequence()));
     } else { 
-      checker.printResultOfCheck(checker.check(args));  
+      printResultOfCheck(checker.check(args));  
     }
   }
+/**
+ *Prints what sequence is.
+ *@resultOfCheck is boolean value,which is the result of verification of sequence.
+ */
+  public static void printReultOfCheck(boolean resultOfCheck) {
+    if (resultOfCheck) {
+      System.out.println("It is NOT non-decreasing sequence.");
+    } else {
+      System.out.println("It is non-decreasing sequence.");
+    }
 } 
