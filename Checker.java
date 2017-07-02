@@ -16,10 +16,4 @@ public class Checker {
     }
     return false;               
   }
-  public void printReultOfCheck(boolean resultOfCheck) {
-    if (resultOfCheck) {
-      System.out.println("It is NOT non-decreasing sequence.");
-    } else {
-      System.out.println("It is non-decreasing sequence.");
-    }
 }    
