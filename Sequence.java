@@ -32,8 +32,8 @@ public class Sequence {
   */
   public static void printResultOfCheck(boolean resultOfCheck) {
      if (resultOfCheck) {
-    System.out.println("It is NOT non-decreasing sequence.");
-    } else {
+       System.out.println("It is NOT non-decreasing sequence.");
+     } else {
       System.out.println("It is non-decreasing sequence.");
     }
   }
