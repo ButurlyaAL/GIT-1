@@ -2,28 +2,23 @@ import java.util.Scanner;
 
 public class Sequence {
   public static void main(String[] args) {
-    boolean check;
-    if (args.length == 0) {
+    if (args.length != 0) { 
+      printResult(check(args));
+    } else {
       Scanner input = new Scanner(System.in);
       System.out.println("Enter an INTEGER sequence(use spaces(If you have finished,press ENTER)):");
       String line = input.nextLine();
       String[] sequence = line.split(" ");
-      check = checking(sequence);
-    } else { 
-      check = checking(args);  
+      printResult(check(sequence));   
     }
-    if (check) {
-    System.out.println("It is NOT non-decreasing sequence.");
-    } else {
-      System.out.println("It is non-decreasing sequence.");
   }
-    /**
-     *returns a boolean value,
-     *which determines that the sequence is non-decreasing or not.
-     *@numbers is the sequence to be checked
-     *@return a boolean value
-     */
-  public static boolean checking(String[] numbers) { 
+/**
+ *Returns a boolean value,
+ *which determines that the sequence is non-decreasing or not.
+ *@numbers is the sequence to be checked
+ *@return a boolean value
+ */
+  public static boolean check(String[] numbers) { 
     for (int i = 0; i < numbers.length - 1; i ++) {
       if (Integer.valueOf(numbers[i + 1]) < Integer.valueOf(numbers[i])) {
         return true;
@@ -31,4 +26,14 @@ public class Sequence {
     }
     return false;               
   }
-}
+ /**
+  *Prints what sequence is.
+  *@resultOfCheck is boolean value,which is the result of verification of sequence.
+  */
+  public static void printResult(boolean resultOfCheck) {
+     if (resultOfCheck) {
+    System.out.println("It is NOT non-decreasing sequence.");
+    } else {
+      System.out.println("It is non-decreasing sequence.");
+    }
+  }
