@@ -12,12 +12,13 @@ public class Sequence {
       printResultOfCheck(check(sequence));   
     }
   }
-/**
- * Returns a boolean value,
- * which determines that the sequence is non-decreasing or not.
- * @param numbers is the sequence to be checked.
- * @return a boolean value.
- */
+  
+  /**
+   * Returns a boolean value,
+   * which determines that the sequence is non-decreasing or not.
+   * @param numbers is the sequence to be checked.
+   * @return a boolean value.
+   */
   public static boolean check(String[] numbers) { 
     for (int i = 0; i < numbers.length - 1; i ++) {
       if (Integer.valueOf(numbers[i + 1]) < Integer.valueOf(numbers[i])) {
