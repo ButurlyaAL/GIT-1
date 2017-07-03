@@ -1,5 +1,5 @@
 /** 
- *Prints the type of sequence:non decreasing or not. 
+ * Prints the type of sequence:non decreasing or not. 
  */
 public class Sequence {
   public static void main(String[] args) {
