@@ -5,7 +5,7 @@ public class Checker {
 /**
  *Returns a boolean value,
  *which determines that the sequence is non-decreasing or not.
- *@numbers is the sequence to be checked
+ *@param sequence is the sequence to be checked
  *@return boolean result of check
  */
   public boolean check(String[] sequence) {
