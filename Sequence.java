@@ -6,9 +6,9 @@ public class Sequence {
     Checker checker = new Checker();
     if (args.length == 0) {
       ConsoleReader consoleReader = new ConsoleReader();
-      printResultOfCheck(checker.check(consoleReader.getSequence()));
+      checker.printResultOfCheck(checker.check(consoleReader.getSequence()));
     } else { 
-      printResultOfCheck(checker.check(args));  
+      checker.printResultOfCheck(checker.check(args));  
     }
   }
 }
