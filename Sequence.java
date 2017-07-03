@@ -15,7 +15,7 @@ public class Sequence {
 /**
  *Returns a boolean value,
  *which determines that the sequence is non-decreasing or not.
- *@numbers is the sequence to be checked
+ *@param numbers is the sequence to be checked
  *@return a boolean value
  */
   public static boolean check(String[] numbers) { 
@@ -28,7 +28,7 @@ public class Sequence {
   }
  /**
   *Prints what sequence is.
-  *@resultOfCheck is a boolean value,which is the result of verification of sequence.
+  *@param resultOfCheck is a boolean value,which is the result of verification of sequence.
   */
   public static void printResultOfCheck(boolean resultOfCheck) {
      if (resultOfCheck) {
