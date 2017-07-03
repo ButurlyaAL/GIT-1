@@ -11,15 +11,4 @@ public class Sequence {
       printResultOfCheck(checker.check(args));  
     }
   }
-/**
- *Prints what sequence is.
- *@param resultOfCheck is boolean value,which is the result of verification of sequence.
- */
-  public static void printReultOfCheck(boolean resultOfCheck) {
-    if (resultOfCheck) {
-      System.out.println("It is NOT non-decreasing sequence.");
-    } else {
-      System.out.println("It is non-decreasing sequence.");
-    }
-  }
 }
