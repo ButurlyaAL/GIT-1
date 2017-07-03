@@ -13,7 +13,7 @@ public class Sequence {
   }
 /**
  *Prints what sequence is.
- *@resultOfCheck is boolean value,which is the result of verification of sequence.
+ *@param resultOfCheck is boolean value,which is the result of verification of sequence.
  */
   public static void printReultOfCheck(boolean resultOfCheck) {
     if (resultOfCheck) {
