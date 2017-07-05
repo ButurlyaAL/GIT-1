@@ -21,7 +21,7 @@ public class Checker {
    * Prints what sequence is.
    * @param resultOfCheck a boolean value,which determines what to print.
    */
-public static void printReultOfCheck(boolean resultOfCheck) {
+public void printReultOfCheck(boolean resultOfCheck) {
     if (resultOfCheck) {
       System.out.println("It is NOT non-decreasing sequence.");
     } else {
