@@ -1,5 +1,5 @@
 /**
- * Checks the type of numerical sequence entered by user.
+ * Checks the type of INTEGER sequence entered by user.
  */
 public class Checker {
   /**
