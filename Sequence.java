@@ -20,8 +20,8 @@ public class Sequence {
    * Prints what sequence is.
    * @param resultOfCheck is a boolean value,which determines what to print.
    */
-  public void printResultOfCheck(boolean resultOfCheck) {
-    if (resultOfCheck) {
+  public void printResultOfCheck(boolean checkBit) {
+    if (checkBit) {
       System.out.println("It is NOT non-decreasing sequence.");
     } else {
       System.out.println("It is non-decreasing sequence.");
