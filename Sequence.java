@@ -6,9 +6,20 @@ public class Sequence {
     Checker checker = new Checker();
     if (args.length == 0) {
       ConsoleReader consoleReader = new ConsoleReader();
-      checker.printResultOfCheck(checker.check(consoleReader.getSequence()));
+      this.printResultOfCheck(checker.check(consoleReader.getSequence()));
     } else { 
-      checker.printResultOfCheck(checker.check(args));  
+      this.printResultOfCheck(checker.check(args));  
+    }
+  }
+  /**
+   * Prints what sequence is.
+   * @param resultOfCheck a boolean value,which determines what to print.
+   */
+  public void printReultOfCheck(boolean resultOfCheck) {
+    if (resultOfCheck) {
+      System.out.println("It is NOT non-decreasing sequence.");
+    } else {
+      System.out.println("It is non-decreasing sequence.");
     }
   }
 }
