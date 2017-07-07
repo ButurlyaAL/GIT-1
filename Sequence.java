@@ -13,7 +13,7 @@ public class Sequence {
         sequence.printResultOfCheck(checker.check(args));  
       }
     } catch (Exception a) {
-      System.out.println("It is not a numbers.Restart programm and try again.");
+      System.out.println("It is not a numbers.Restart programm and enter an INTEGER sequence.");
     }
   }
   /**
