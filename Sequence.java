@@ -3,19 +3,20 @@
  */
 public class Sequence {
   public static void main(String[] args) {
+    Sequence sequence = new Sequence();
     Checker checker = new Checker();
     if (args.length == 0) {
       ConsoleReader consoleReader = new ConsoleReader();
-      this.printResultOfCheck(checker.check(consoleReader.getSequence()));
+      sequence.printResultOfCheck(checker.check(consoleReader.getSequence()));
     } else { 
-      this.printResultOfCheck(checker.check(args));  
+      sequence.printResultOfCheck(checker.check(args));  
     }
   }
   /**
    * Prints what sequence is.
    * @param resultOfCheck a boolean value,which determines what to print.
    */
-  public void printReultOfCheck(boolean resultOfCheck) {
+  public void printResultOfCheck(boolean resultOfCheck) {
     if (resultOfCheck) {
       System.out.println("It is NOT non-decreasing sequence.");
     } else {
