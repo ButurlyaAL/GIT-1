@@ -13,12 +13,12 @@ public class Sequence {
         sequence.printResultOfCheck(checker.check(args));  
       }
     } catch (Exception a) {
-      System.out.println("It is not a numbers.Please try again.");
+      System.out.println("It is not a numbers.Restart programm and try again.");
     }
   }
   /**
-   * Prints what sequence is.
-   * @param resultOfCheck is a boolean value,which determines what to print.
+   * Prints the type of sequence.
+   * @param checkBit is a boolean value,which determines what to print.
    */
   public void printResultOfCheck(boolean checkBit) {
     if (checkBit) {
