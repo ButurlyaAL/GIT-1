@@ -16,16 +16,3 @@ public class Checker {
     }
     return false;               
   }
-  
-  /**
-   * Prints what sequence is.
-   * @param resultOfCheck a boolean value,which determines what to print.
-   */
-public void printReultOfCheck(boolean resultOfCheck) {
-    if (resultOfCheck) {
-      System.out.println("It is NOT non-decreasing sequence.");
-    } else {
-      System.out.println("It is non-decreasing sequence.");
-    }
-  }
-}
