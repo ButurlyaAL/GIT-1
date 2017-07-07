@@ -14,7 +14,7 @@ public class Sequence {
   }
   /**
    * Prints what sequence is.
-   * @param resultOfCheck a boolean value,which determines what to print.
+   * @param resultOfCheck is a boolean value,which determines what to print.
    */
   public void printResultOfCheck(boolean resultOfCheck) {
     if (resultOfCheck) {
