@@ -5,11 +5,15 @@ public class Sequence {
   public static void main(String[] args) {
     Sequence sequence = new Sequence();
     Checker checker = new Checker();
-    if (args.length == 0) {
-      ConsoleReader consoleReader = new ConsoleReader();
-      sequence.printResultOfCheck(checker.check(consoleReader.getSequence()));
-    } else { 
-      sequence.printResultOfCheck(checker.check(args));  
+    try {
+      if (args.length == 0) {
+        ConsoleReader consoleReader = new ConsoleReader();
+        sequence.printResultOfCheck(checker.check(consoleReader.getSequence()));
+      } else { 
+        sequence.printResultOfCheck(checker.check(args));  
+      }
+    } catch (Exception a) {
+      System.out.println("It is not a numbers.Please try again.");
     }
   }
   /**
