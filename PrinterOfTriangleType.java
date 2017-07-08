@@ -7,7 +7,7 @@ public class PrinterOfTriangleType {
    * @param qualifier is a integer value,which determines what to print.
    */
   public void printTypeOfTriangle(int qualifier) {
-    if(qualifier == 0) {
+    if (qualifier == 0) {
       System.out.println("Triangle is normal.");
     } else if (qualifier == 1) {
       System.out.println("Triangle is isosceles.");
