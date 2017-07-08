@@ -4,7 +4,7 @@ public class Triangle {
   private BigDecimal[] sides;
   public Triangle(String[] sequence) {
     if (sequence.length > 3) {
-      throw new IndexOutOfBoundsException();
+      throw new IllegalArgumentException();
     } 
     sides = new BigDecimal[3];
     for (int i = 0; i < 3; i ++) {
