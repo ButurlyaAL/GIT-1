@@ -12,6 +12,7 @@ public class Triangle {
   }
 }
   /**
+   * Returns value of Triangle side.
    * @return value of Triangle side.
    */
   public BigDecimal getSide(int i) {
