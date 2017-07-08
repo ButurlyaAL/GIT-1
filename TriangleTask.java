@@ -17,7 +17,7 @@ public class TriangleTask {
     } catch (NumberFormatException a) {
       System.out.println("It is not a numbers.Start programm again and enter a numbers");
     } catch (IndexOutOfBoundsException b) {
-      System.out.println("It is more than 3 values.Strat programm again and enter 3 values for a Tringle.");
+      System.out.println("It is more than 3 values.Strat programm again and enter 3 values for a Triangle.");
     }
   }
 }
