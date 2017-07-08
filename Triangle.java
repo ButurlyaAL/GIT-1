@@ -1,8 +1,8 @@
 import java.math.BigDecimal;
 
-public class Tringle {
+public class Triangle {
   private BigDecimal[] sides;
-  public Tringle(String[] sequence) {
+  public Triangle(String[] sequence) {
     if (sequence.length > 3) {
       throw new IndexOutOfBoundsException();
     } 
@@ -11,6 +11,9 @@ public class Tringle {
       sides[i] = new BigDecimal(sequence[i].replaceAll(",",""));
   }
 }
+  /**
+   * @return value of Triangle side.
+   */
   public BigDecimal getSide(int i) {
     return sides[i]; 
   }
