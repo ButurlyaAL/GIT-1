@@ -1,10 +1,17 @@
+/** 
+ * Prints the type of tringle:normal,isosceles and equilateral. 
+ */
 public class PrinterOfTringleType {
-  public void printTypeOfTringle(int n) {
-    if(n == 0) {
+  /**
+   * Prints the type of tringle.
+   * @param qualifier is a integer value,which determines what to print.
+   */
+  public void printTypeOfTringle(int qualifier) {
+    if(qualifier == 0) {
       System.out.println("Tringle is normal.");
-    } else if (n == 1) {
+    } else if (qualifier == 1) {
       System.out.println("Tringle is isosceles.");
-    } else if (n == 2) {
+    } else if (qualifier == 2) {
       System.out.println("Tringle is equilateral.");
     }
   }
