@@ -1,5 +1,5 @@
 /**
- * Determinates the type of triangle:normal,isosceles and equilateral.
+ * Determines the type of triangle:normal,isosceles and equilateral.
  */
 public class TriangleTypeDeterminator {
   /**
