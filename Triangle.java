@@ -7,10 +7,10 @@ public class Triangle {
       throw new IndexOutOfBoundsException();
     } 
     sides = new BigDecimal[3];
-    for(int i = 0; i < 3; i ++) {
+    for (int i = 0; i < 3; i ++) {
       sides[i] = new BigDecimal(sequence[i].replaceAll(",",""));
+    }
   }
-}
   /**
    * Returns value of Triangle side.
    * @return value of Triangle side.
