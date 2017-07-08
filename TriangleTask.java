@@ -1,5 +1,5 @@
 /**
- * Entry point of task about Triangle sides.
+ * Entry point of the task about Triangle sides.
  */
 public class TriangleTask {
   public static void main(String[] args) {
