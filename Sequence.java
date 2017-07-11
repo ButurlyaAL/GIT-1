@@ -8,23 +8,23 @@ public class Sequence {
     try {
       if (args.length == 0) {
         ConsoleReader consoleReader = new ConsoleReader();
-        sequence.printResultOfCheck(checker.check(consoleReader.getSequence()));
+        sequence.printTypeOfSequence(checker.isNonDecreasing(consoleReader.getSequence()));
       } else { 
-        sequence.printResultOfCheck(checker.check(args));  
+        sequence.printTypeOfSequence(checker.isNonDecreasing(args));  
       }
     } catch (Exception a) {
-      System.out.println("It is not a numbers.Restart programm and enter an INTEGER sequence.");
+      System.out.println("It is not a numbers.Start programm again and enter an INTEGER sequence.");
     }
   }
   /**
    * Prints the type of sequence.
-   * @param checkBit is a boolean value,which determines what to print.
+   * @param isNonDecreasing is a boolean value,which determines what to print.
    */
-  public void printResultOfCheck(boolean checkBit) {
-    if (checkBit) {
-      System.out.println("It is NOT non-decreasing sequence.");
-    } else {
+  public void printTypeOfSequence(boolean isNonDecreasing) {
+    if (isNonDecreasing) {
       System.out.println("It is non-decreasing sequence.");
+    } else {
+      System.out.println("It is NOT non-decreasing sequence.");
     }
   }
 }
