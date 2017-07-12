@@ -18,10 +18,10 @@ public class Person {
    * @throw NumberFormatException if age is not positive.
    */
   public void verify() {
-    if (isNumber(firstName) || isNumber(lastName)) {
+    if (stringIsNumber(firstName) || stringIsNumber(lastName)) {
       throw new IllegalArgumentException();
     }
-    if (!isPositive(age)) {
+    if (!ageIsPositive(age)) {
       throw new NumberFormatException();
     } 
   }
@@ -29,7 +29,7 @@ public class Person {
    * Checks whether the entered string is a number.
    * @return true if entered string is a number;false otherwise.
    */
-  public boolean isNumber(String word) {
+  private boolean stringIsNumber(String word) {
     try {
       int a = Integer.valueOf(word);
     } catch (Exception a) {
@@ -41,7 +41,7 @@ public class Person {
    * Checks age is positive or not.
    * @return true if age is positive;false otherwise.
    */
-  public boolean isPositive(int age) {
+  private boolean ageIsPositive(int age) {
     if (age < 0) {
       return false;
     } else {
