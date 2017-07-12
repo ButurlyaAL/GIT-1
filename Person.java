@@ -17,7 +17,7 @@ public class Person {
    * @throw IllegalArgumentException if firstname or lastname was entered in wrong format.
    * @throw NumberFormatException if age is not positive.
    */
-  public void verify() {
+  private void verify() {
     if (stringIsNumber(firstName) || stringIsNumber(lastName)) {
       throw new IllegalArgumentException();
     }
