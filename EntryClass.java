@@ -11,7 +11,6 @@ public class EntryClass {
       int number = input.nextInt();
       Person[] persons = new Person[number]; 
       for(int i = 0; i < number; i ++) {
-        input = new Scanner(System.in);
         System.out.println("Enter information(firstname,lastname and age) about person(use spaces) :");
         String line = input.nextLine();
         String[] information = line.split(" ");
