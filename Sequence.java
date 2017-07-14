@@ -13,7 +13,7 @@ public class Sequence {
         sequence.printTypeOfSequence(checker.isNonDecreasing(args));  
       }
     } catch (Exception a) {
-      System.out.println("It is not a numbers.Start programm again and enter an INTEGER sequence.");
+      System.out.println("It is not a integer.Start programm again and enter an integer sequence.");
       main(args);
     }
   }
@@ -26,7 +26,7 @@ public class Sequence {
     if (isNonDecreasing) {
       System.out.println("It is non-decreasing sequence.");
     } else {
-      System.out.println("It is NOT non-decreasing sequence.");
+      System.out.println("This sequence is decreasing.");
     }
   }
 }
