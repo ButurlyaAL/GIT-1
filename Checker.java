@@ -4,9 +4,9 @@
 public class Checker {
   
   /**
-   * Returns true if the sequence is NOT non-decreasing.
+   * Returns true if the sequence is non-decreasing.
    * @param sequence is the sequence to be checked.
-   * @return true if the sequence is NOT non-decreasing;false otherwise
+   * @return true if the sequence is non-decreasing;false otherwise
    */
   public boolean isNonDecreasing(String[] sequence) {
     for (int i = 0; i < sequence.length - 1; i ++) {
