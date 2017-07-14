@@ -2,6 +2,7 @@
  * Checks the type of INTEGER sequence entered by user.
  */
 public class Checker {
+  
   /**
    * Returns true if the sequence is NOT non-decreasing.
    * @param sequence is the sequence to be checked.
