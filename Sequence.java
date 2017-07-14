@@ -14,8 +14,10 @@ public class Sequence {
       }
     } catch (Exception a) {
       System.out.println("It is not a numbers.Start programm again and enter an INTEGER sequence.");
+      main(args);
     }
   }
+  
   /**
    * Prints the type of sequence.
    * @param isNonDecreasing is a boolean value,which determines what to print.
