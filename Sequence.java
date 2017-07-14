@@ -8,7 +8,7 @@ public class Sequence {
     try {
       if (args.length == 0) {
         ConsoleReader consoleReader = new ConsoleReader();
-        sequence.printTypeOfSequence(checker.isNonDecreasing(consoleReader.getSequence()));
+        sequence.printTypeOfSequence(checker.isNonDecreasing(consoleReader.readSequence()));
       } else { 
         sequence.printTypeOfSequence(checker.isNonDecreasing(args));  
       }
