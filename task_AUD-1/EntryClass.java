@@ -5,7 +5,7 @@ public class EntryClass {
   public static void main(String[] args) { 
   Reader reader = new Reader();
   try {
-      for(Person person : reader.getListOfPersons()) {
+      for (Person person : reader.getListOfPersons()) {
         System.out.printf("Firstname:%s  Lastname:%s  Age:%d  \n", person.getFirstName(), person.getLastName(), person.getAge());
       }
     } catch (NumberFormatException a) {
