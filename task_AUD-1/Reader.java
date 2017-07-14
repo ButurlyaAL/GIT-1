@@ -8,7 +8,7 @@ public class Reader {
   private Scanner input;
   /**
    * Reads information about persons.
-   * @return LinkedLIst which consists information about persons.
+   * @return LinkedList, which consists of information about persons.
    */
   public LinkedList<Person> getListOfPersons() {
     input = new Scanner(System.in);
