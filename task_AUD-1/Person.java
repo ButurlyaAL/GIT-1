@@ -12,6 +12,7 @@ public class Person {
     age = Integer.valueOf(information[2]);
     verify();
   }
+  
   /**
    * Checks correctness of entered information about person.
    * @throw IllegalArgumentException if firstname or lastname was entered in wrong format.
@@ -25,6 +26,7 @@ public class Person {
       throw new NumberFormatException();
     } 
   }
+  
   /**
    * Checks whether the entered string is a number.
    * @return true if entered string is a number;false otherwise.
@@ -37,6 +39,7 @@ public class Person {
     }
     return true;
   }
+  
   /**
    * Checks age is positive or not.
    * @return true if age is positive;false otherwise.
@@ -48,18 +51,21 @@ public class Person {
       return true;
     }
   }
+  
   /**
    * @return firstName.
    */
   public String getFirstName() {
     return firstName;
   }
+  
   /**
    * @return lastName.
    */
   public String getLastName() {
     return lastName;
   }
+  
   /**
    * @return age.
    */
