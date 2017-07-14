@@ -1,5 +1,5 @@
 /**
- * Makes list with information about persons.
+ * Displays a list of information about persons.
  */
 public class EntryClass {
   public static void main(String[] args) { 
