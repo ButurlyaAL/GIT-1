@@ -11,8 +11,7 @@ public class Sequence {
         printer.printTypeOfSequence(new Checker(args));  
       }
     } catch (Exception a) {
-      System.out.println("It is not an integer sequence.Try again to enter an integer sequence.");
-      main(args);
+      System.out.println("It is not an integer sequence.Start programm again and try to enter an integer sequence.");
     }
   }
 }
