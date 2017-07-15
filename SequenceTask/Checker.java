@@ -19,6 +19,9 @@ public class Checker {
     }
     return true;               
   }
+  /**
+   * @return result of check for nondecreasing.
+   */
   public boolean getResult() {
     return result;
   }
