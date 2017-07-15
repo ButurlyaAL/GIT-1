@@ -7,7 +7,7 @@ public class ConsoleReader {
   /**
    * Returns String array,
    * which consists of the numbers(in the string representation) entered by the user.
-   * @return String array.
+   * @return string representation of sequence entered by the user.
    */
   public String[] readSequence() {
     Scanner input = new Scanner(System.in);
