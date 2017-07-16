@@ -3,7 +3,7 @@
  */
 public class RegularTriangleBuilder {
    /**
-   * Builds equaterial triangle.
+   * Builds regular triangle.
    * @return exemplar of successor of Triangle.
    */
   public Triangle triangleBuild(String[] sequence) {
