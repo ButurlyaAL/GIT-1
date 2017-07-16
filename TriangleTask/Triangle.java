@@ -16,9 +16,14 @@ public abstract class Triangle {
     thirdSide = new BigDecimal(sequence[2].replaceAll(",",""));
   }
   /**
-   * Checks for exist isosceles triangle.
+   * Checks for exist triangle.
+   * @throw IllegalArgumentException if triangle doesn't exists.
    */
-  public abstract void exists();
+  public abstract void exists() {
+    if (!(firstSide.add(secondSide).compareTo(thirdSide) == 1 && firstSide.add(thirdSide).compareTo(secondSide) == 1 && secondSide.add(thirdSide).compareTo(firstSide) == 1)) {
+      throw new IllegalArgumentException();
+    }     
+  } 
   /**
    * Returns String containing type of triangle.
    */
