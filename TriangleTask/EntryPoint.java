@@ -1,3 +1,6 @@
+/**
+ * Entry point of te task about triangle.
+ */
 public class EntryPoint {
   public static void main(String[] args) {
     EquaterialTriangleBuilder triangleBuilder = new EquaterialTriangleBuilder();
