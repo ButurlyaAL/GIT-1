@@ -1,5 +1,5 @@
 /**
- * Entry point of te task about triangle.
+ * Entry point of the task about triangle.
  */
 public class EntryPoint {
   public static void main(String[] args) {
