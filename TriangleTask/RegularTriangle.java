@@ -1,13 +1,14 @@
+/**
+ * Representation of isosceles triangle.
+ */
 public class RegularTriangle extends Triangle {
   public RegularTriangle(String[] sequence) {
     super(sequence);
-    exists();
+    super.exists();
   }
-  public void exists() {
-    if(!(firstSide.add(secondSide).compareTo(thirdSide) == 1 && firstSide.add(thirdSide).compareTo(secondSide) == 1 && secondSide.add(thirdSide).compareTo(firstSide) == 1)) {
-      throw new IllegalArgumentException();
-    }   
-  }
+  /**
+   * @return String containing type of triangle.
+   */
   public String getType() {
     return "Triangle is Regular";
   }   
