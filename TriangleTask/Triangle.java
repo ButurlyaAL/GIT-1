@@ -1,5 +1,8 @@
 import java.math.BigDecimal;
 
+/**
+ * Representation of triangle.
+ */
 public abstract class Triangle {
   protected BigDecimal firstSide;
   protected BigDecimal secondSide;
@@ -12,6 +15,12 @@ public abstract class Triangle {
     secondSide = new BigDecimal(sequence[1].replaceAll(",",""));
     thirdSide = new BigDecimal(sequence[2].replaceAll(",",""));
   }
+  /**
+   * Checks for exist isosceles triangle.
+   */
   public abstract void exists();
+  /**
+   * Returns String containing type of triangle.
+   */
   public abstract String getType();
 }
