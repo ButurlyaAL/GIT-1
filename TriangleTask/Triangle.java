@@ -19,7 +19,7 @@ public abstract class Triangle {
    * Checks for exist triangle.
    * @throw IllegalArgumentException if triangle doesn't exists.
    */
-  public abstract void exists() {
+  public void exists() {
     if (!(firstSide.add(secondSide).compareTo(thirdSide) == 1 && firstSide.add(thirdSide).compareTo(secondSide) == 1 && secondSide.add(thirdSide).compareTo(firstSide) == 1)) {
       throw new IllegalArgumentException();
     }     
