@@ -1,4 +1,3 @@
-import java.math.BigDecimal;
 public class RegularTriangle extends Triangle {
   public RegularTriangle(String[] sequence) {
     super(sequence);
@@ -12,5 +11,4 @@ public class RegularTriangle extends Triangle {
   public String getType() {
     return "Triangle is Regular";
   }   
-}
-  
+} 
