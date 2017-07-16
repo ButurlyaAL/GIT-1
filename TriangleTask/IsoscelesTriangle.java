@@ -12,7 +12,7 @@ public class IsoscelesTriangle extends Triangle {
    */
   public void exists() {
     super.exists();   
-    if(!(firstSide.compareTo(secondSide) == 0 || firstSide.compareTo(thirdSide) == 0 || secondSide.compareTo(thirdSide) == 0)) {
+    if (!(firstSide.compareTo(secondSide) == 0 || firstSide.compareTo(thirdSide) == 0 || secondSide.compareTo(thirdSide) == 0)) {
       throw new IllegalArgumentException();  
     } 
   }
