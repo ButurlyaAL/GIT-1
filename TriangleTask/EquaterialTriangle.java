@@ -7,6 +7,7 @@ public class EquaterialTriangle extends Triangle {
     exists();
   }
   /**
+   * Checks for exist equilateral triangle.
    * @throw IllegalArgumentException if triangle isn't equaterial or triangle can't exists.
    */
   public void exists() {
