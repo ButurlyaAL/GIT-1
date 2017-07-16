@@ -5,7 +5,6 @@ public class EquaterialTriangleBuilder {
   /**
    * Builds equaterial triangle.
    * @return exemplar of successor of Triangle.
-   * @throw IllegalArgumentException if equaterial triangle doesn't exists.
    */
   public Triangle triangleBuild(String[] sequence) {
     try {
