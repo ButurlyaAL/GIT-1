@@ -1,5 +1,5 @@
 /**
- * Entry Point for task about nondecreasing sequence.
+ * Entry Point for task about analisys of sequence.
  */
 public class Sequence {
   public static void main(String[] args) {
