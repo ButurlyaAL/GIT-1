@@ -3,9 +3,13 @@
  */
 public class Checker {
   private boolean result;
+  /**
+   * Class constructor.
+   */
   public Checker(String[] sequence) {
     result = checkForNondecreasing(sequence);
   }
+  
   /**
    * Returns true if the sequence is non-decreasing.
    * @param sequence is the sequence to be checked.
@@ -19,6 +23,7 @@ public class Checker {
     }
     return true;               
   }
+  
   /**
    * @return result of check for nondecreasing.
    */
