@@ -23,14 +23,14 @@ public class Person {
       throw new NumberFormatException("Age isn't positive.");
     } 
   }
-  private boolean namesIsNumber() {
+  private boolean namesAreCorrect() {
     try {
       int number = Integer.valueOf(firstName);
       number = Integer.valueOf(lastName);
     } catch (Exception b) {
-     return false;
+     return true;
     }
-    return true;
+    return false;
   }
   private boolean ageIsPositive() {
    return age >= 0;
