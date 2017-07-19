@@ -1,18 +1,23 @@
+import java.math.BigDecimal;
+
 /**
  * Builds equateterial triangle.
  */
-public class EquaterialTriangleBuilder {
+public class EquaterialTriangleBuilder extends TriangleBuilder {
+  public EquaterialTriangleBuilder(TriangleBuilder triangleBuilder) {
+    super(triangleBuilder);
+  }
+  
   /**
    * Builds equaterial triangle.
-   * @return exemplar of successor of Triangle.
+   * @return an exemplar of Triangle successor.
    */
-  public Triangle triangleBuild(String[] sequence) {
+  public Triangle triangleBuild(BigDecimal[] sides) {
     try {
-      Triangle triangle = new EquaterialTriangle(sequence);
+      Triangle triangle = new EquaterialTriangle(sides);
       return triangle;
-    } catch (IllegalArgumentException a) {
-      IsoscelesTriangleBuilder triangleBuilder = new IsoscelesTriangleBuilder();    
-      return triangleBuilder.triangleBuild(sequence);
+    } catch (IllegalArgumentException a) {    
+      return triangleBuilder.triangleBuild(sides);
     }
   }
-}      
+}
