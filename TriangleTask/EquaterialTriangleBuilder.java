@@ -10,14 +10,13 @@ public class EquaterialTriangleBuilder extends TriangleBuilder {
   
   /**
    * Builds equaterial triangle.
-   * @return an exemplar of Triangle successor.
+   * @return an exemplar of EquaterialTriangle if it exists.
    */
   public Triangle triangleBuild(BigDecimal[] sides) {
     try {
-      Triangle triangle = new EquaterialTriangle(sides);
-      return triangle;
+      return new EquaterialTriangle(sides);
     } catch (IllegalArgumentException a) {    
-      return triangleBuilder.triangleBuild(sides);
+      return null;
     }
   }
 }
