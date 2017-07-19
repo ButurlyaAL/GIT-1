@@ -3,10 +3,10 @@
  */
 public class EntryPoint {
   public static void main(String[] args) {
-    EquaterialTriangleBuilder triangleBuilder = new EquaterialTriangleBuilder();
-    PrinterOfTriangleType printer = new PrinterOfTriangleType();
+    EquaterialTriangleBuilder triangleBuilder = new EquaterialTriangleBuilder(new IsoscelesTriangleBuilder(new TriangleBuilder(null)));
     try {
-      printer.printTypeOfTriangle(triangleBuilder.triangleBuild(new ConsoleReader().readSequence()));
+      Triangle triangle = triangleBuilder.triangleBuild(new ConsoleReader().getSides());
+      System.out.println(triangle.getType());
     } catch (NumberFormatException a) {
       System.out.println("You have entered values in wrong format.Start programm again and enter a numbers.");
     } catch (IndexOutOfBoundsException b) {
