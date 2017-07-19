@@ -12,7 +12,7 @@ public class Triangle {
    */
   public Triangle(BigDecimal[] sides) {
     if (sides.length > 3) {
-      throw new IndexOutOfBoundsException();
+      throw new IndexOutOfBoundsException("More than 3 values was entered.");
     } 
     firstSide = sides[0];
     secondSide = sides[1];
@@ -26,7 +26,7 @@ public class Triangle {
    */
   public void exists() {
     if (!(firstSide.add(secondSide).compareTo(thirdSide) == 1 && firstSide.add(thirdSide).compareTo(secondSide) == 1 && secondSide.add(thirdSide).compareTo(firstSide) == 1)) {
-      throw new IllegalArgumentException();
+      throw new IllegalArgumentException("Triangle doesn't exists.");
     }     
   }
   
