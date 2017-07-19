@@ -10,7 +10,7 @@ public class IsoscelesTriangleBuilder extends TriangleBuilder {
   
   /**
    * Builds isosceles triangle.
-   * @return exemplar of successor of Triangle.
+   * @return an exemplar of IsoscelesTriangle if it exists.
    */
   public Triangle triangleBuild(BigDecimal[] sides) {
     if (triangleBuilder.triangleBuild(sides) == null) {
