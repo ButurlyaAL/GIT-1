@@ -16,7 +16,7 @@ public class Person {
     verify();
   }
   private void verify() {
-    if (namesIsNumber()) {
+    if (!namesAreCorrect()) {
       throw new IllegalArgumentException("Wrong firstname or lastname");
     }
     if (!ageIsPositive()) {
