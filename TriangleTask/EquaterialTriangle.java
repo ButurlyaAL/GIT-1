@@ -26,6 +26,6 @@ public class EquaterialTriangle extends Triangle {
    * @return String containing type of triangle.
    */
   public String getType() {
-    return "Triangle is equilzteral.";
+    return "Triangle is equilateral.";
   }
 }
