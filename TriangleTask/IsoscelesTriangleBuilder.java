@@ -13,10 +13,13 @@ public class IsoscelesTriangleBuilder extends TriangleBuilder {
    * @return exemplar of successor of Triangle.
    */
   public Triangle triangleBuild(BigDecimal[] sides) {
-    try {
-      Triangle triangle = new IsoscelesTriangle(sides);
-      return triangle;
-    } catch (IllegalArgumentException a) {   
+    if (triangleBuilder.triangleBuild(sides) == null) {
+      try {
+        return new IsoscelesTriangle(sides);
+      } catch (IllegalArgumentException a) {   
+        return null;
+      }
+    } else {
       return triangleBuilder.triangleBuild(sides);
     }
   }
