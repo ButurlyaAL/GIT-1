@@ -17,7 +17,10 @@ public class TriangleBuilder {
    * @return an exemplar of Triangle.
    */
   public Triangle triangleBuild(BigDecimal[] sides) {
-      Triangle triangle = new Triangle(sides);
-      return triangle;
+    if (triangleBuilder.triangleBuild(sides) == null) {
+      return new Triangle(sides);
+    } else {
+      return triangleBuilder.triangleBuild(sides);
+    }
   }
 }
