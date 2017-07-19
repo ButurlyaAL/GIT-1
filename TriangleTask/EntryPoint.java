@@ -3,7 +3,7 @@
  */
 public class EntryPoint {
   public static void main(String[] args) {
-    EquaterialTriangleBuilder triangleBuilder = new EquaterialTriangleBuilder(new IsoscelesTriangleBuilder(new TriangleBuilder(null)));
+    TriangleBuilder triangleBuilder = new TriangleBuilder(new IsoscelesTriangleBuilder(new EquaterialTriangleBuilder(null)));
     try {
       Triangle triangle = triangleBuilder.triangleBuild(new ConsoleReader().getSides());
       System.out.println(triangle.getType());
