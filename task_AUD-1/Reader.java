@@ -7,11 +7,17 @@ import java.util.LinkedList;
 public class Reader {
   private Scanner input;
   /**
+   * Makes an exemplar of Reader.
+   */
+  public Reader() {
+    input = new Scanner(System.in);
+  }
+
+  /**
    * Reads information about persons.
    * @return LinkedList, which consists of information about persons.
    */
   public LinkedList<Person> getListOfPersons() {
-    input = new Scanner(System.in);
     LinkedList<Person> persons = new LinkedList<>();
     do {
       System.out.println("Enter information(firstname,lastname and age) about person(use spaces) :");
