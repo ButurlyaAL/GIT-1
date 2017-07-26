@@ -14,6 +14,7 @@ public class TriangleBuilder {
    
   /**
    * Builds regular triangle.
+   * @param sides is the array consists of sides of triangle.
    * @return an exemplar of Triangle.
    */
   public Triangle triangleBuild(BigDecimal[] sides) {
