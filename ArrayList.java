@@ -65,7 +65,7 @@ public class ArrayList {
   /**
    * Increases size of the array.
    */
-  public void sizeIncrease() {    
+  private void sizeIncrease() {    
       size *= 2;
       String[] newArray = new String[size];
       System.arraycopy(array,0,newArray,0,array.length);
