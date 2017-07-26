@@ -1,7 +1,7 @@
 /**
  * Realisation of a dynamic Array
  */
-public class ArrayList {
+public class MyArrayList {
   private String[] array;
   private int size;
   /**
