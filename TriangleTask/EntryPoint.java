@@ -7,12 +7,12 @@ public class EntryPoint {
     try {
       Triangle triangle = triangleBuilder.triangleBuild(new ConsoleReader().getSides());
       System.out.println(triangle.getType());
-    } catch (NumberFormatException a) {
-      System.out.println("You have entered values in wrong format.Start programm again and enter a numbers.");
-    } catch (IndexOutOfBoundsException b) {
-      System.out.println("You have entered more or less than 3 values.Start programm again and enter 3 values.");
-    } catch (IllegalArgumentException c) {
-      System.out.println("Such triangle does not exists.Start programm again. ");
+    } catch (NumberFormatException firstException) {
+      firstException.getMessage();
+    } catch (IndexOutOfBoundsException secondException) {
+      secondException.getMessage();
+    } catch (IllegalArgumentException thirdException) {
+      thirdException.getMessage();
     }
   }
 }
