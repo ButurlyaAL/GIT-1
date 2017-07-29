@@ -8,7 +8,7 @@ public class EntryPoint {
       Triangle triangle = triangleBuilder.triangleBuild(new ConsoleReader().getSides());
       System.out.println(triangle.getType());
     } catch (NumberFormatException firstException) {
-      firstException.getMessage();
+      System.out.println("You have entered values in wrong format.Start programm again and enter a numbers.");
     } catch (IndexOutOfBoundsException secondException) {
       secondException.getMessage();
     } catch (IllegalArgumentException thirdException) {
