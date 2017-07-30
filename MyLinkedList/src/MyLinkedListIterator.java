@@ -7,11 +7,9 @@ import java.util.Iterator;
 public class MyLinkedListIterator<Type> implements Iterator<Type> {
   private MyLinkedList<Type> list;
   private Element<Type> element;
-  private int count;
   public MyLinkedListIterator(MyLinkedList<Type> list) {
     this.list = list;
-    element = list.getHead().next;
-    count = 0;
+    element = null;
   }
 
   /**
@@ -19,7 +17,7 @@ public class MyLinkedListIterator<Type> implements Iterator<Type> {
    */
   @Override
   public boolean hasNext() {
-    return count < list.getSize();
+    return element == null || element.next != list.getHead();
   }
   
   /**
@@ -27,10 +25,11 @@ public class MyLinkedListIterator<Type> implements Iterator<Type> {
    */
   @Override
   public Type next() {
-    if (count > 0) {
+    if (element == null) {
+      element = list.getHead().next;
+    } else {
       element = element.next;
     }
-    count ++;
     return element.getValue();
   }
 }
