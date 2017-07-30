@@ -4,7 +4,7 @@
  */
 public class MyLinkedList<Type> implements Iterable<Type> {
   private Element<Type> head;
-  private int count;
+  private int size;
 
   /**
    * Makes an instance of MyLinkedList.
@@ -12,7 +12,7 @@ public class MyLinkedList<Type> implements Iterable<Type> {
    */
   public MyLinkedList() {
     head = new Element<>();
-    count = 0;
+    size = 0;
   }
 
   /**
@@ -25,8 +25,8 @@ public class MyLinkedList<Type> implements Iterable<Type> {
   /**
    * @return the number of elements of the list.
    */
-  public int getCount() {
-    return count;
+  public int getSize() {
+    return size;
   }
 
   /**
@@ -47,7 +47,7 @@ public class MyLinkedList<Type> implements Iterable<Type> {
       element.previous.next = element;
       head.previous = element;
     }
-    count++;
+    size++;
   }
 
   /**
@@ -67,7 +67,7 @@ public class MyLinkedList<Type> implements Iterable<Type> {
       element.next.previous = element;
       head.next = element;
     }
-    count++;
+    size++;
   }
 
   private Element search(Type value) {
@@ -90,7 +90,7 @@ public class MyLinkedList<Type> implements Iterable<Type> {
       element.next.previous = element.previous;
       element.next = null;
       element.previous = null;
-      count--;
+      size--;
     }
   }
 
@@ -125,7 +125,7 @@ public class MyLinkedList<Type> implements Iterable<Type> {
   public void clear() {
     head.next = head;
     head.previous = head;
-    count = 0;
+    size = 0;
   }
 
   /**
