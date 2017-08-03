@@ -21,7 +21,7 @@ public class MyArrayList {
    * Adds an element to the end of the array.
    * @param element is an element which is added.
    */
-  public void add(Type element) {
+  public void add(String element) {
     if (array[size - 1] != null) {
       this.sizeIncrease();
     }
