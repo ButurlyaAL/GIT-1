@@ -38,16 +38,13 @@ public class MyArrayList {
     if (array[size - 1] != null) {
       this.sizeIncrease();
     }
-    String[] newArray = new String[size];
-    System.arraycopy(array,0,newArray,0,index);
-    newArray[index] = element;
-    System.arraycopy(array,index,newArray,index + 1,array.length - index - 1);
+    System.arraycopy(array,index,array,index + 1,array.length - index - 1);
+    array[index] = element;
     if (currentIndex == index - 1) {
       currentIndex = index + 2;
     } else {
       currentIndex++;
-    }
-    array = newArray; 
+    } 
   }
 
   /**
