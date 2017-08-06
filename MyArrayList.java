@@ -3,9 +3,9 @@
  */
 public class MyArrayList {
   private String[] array;
-  private int size;
+  private int capasity;
   /**
-   * The field that specifies the index of the array element that follows must be filled by ArrayList.add().
+   * The field that specifies the index of the array element that follows must be filled by MyArrayList.add().
    */
   private int currentIndex;
 
@@ -13,8 +13,8 @@ public class MyArrayList {
    * Creates an empty array.
    */
   public ArrayList() {
-    size = 10;
-    array = new String[size];
+    capasity = 10;
+    array = new String[capasity];
   }
 
   /**
@@ -22,8 +22,8 @@ public class MyArrayList {
    * @param element is an element which is added.
    */
   public void add(String element) {
-    if (array[size - 1] != null) {
-      this.sizeIncrease();
+    if (array[capasity - 1] != null) {
+      this.capasityIncrease();
     }
     array[currentIndex] = element;
     currentIndex++;
@@ -35,8 +35,8 @@ public class MyArrayList {
    * @param index is an array cell index in which element inserted.
    */
   public void insert(String element,int index) {
-    if (array[size - 1] != null) {
-      this.sizeIncrease();
+    if (array[capasity - 1] != null) {
+      this.capasityIncrease();
     }
     System.arraycopy(array,index,array,index + 1,array.length - index - 1);
     array[index] = element;
@@ -48,7 +48,7 @@ public class MyArrayList {
   }
 
   /**
-   * Remove an element.
+   * Removes an element.
    * @param index is the index of an element which is removed.
    */
   public void remove(int index) {
@@ -59,12 +59,20 @@ public class MyArrayList {
   /**
    * Increases size of the array.
    */
-  private void sizeIncrease() {    
-      size *= 2;
-      String[] newArray = new String[size];
+  private void capasityIncrease() {    
+      capasity *= 2;
+      String[] newArray = new String[capasity];
       System.arraycopy(array,0,newArray,0,array.length);
       array = newArray;
   }
+  
+  /**
+   * @return current size of the list.
+   */
+  public int getSize() {
+    return currentIndex;
+  }
+  
   /**
    * @return the element of the list.
    */
