@@ -55,11 +55,8 @@ public class MyArrayList {
    * @param index is the index of an element which is removed.
    */
   public void remove(int index) {
-    String[] newArray = new String[size];
-    System.arraycopy(array,0,newArray,0,index);
-    System.arraycopy(array,index + 1,newArray,index,array.length - index - 1);
+    System.arraycopy(array,index + 1,array,index,array.length - index - 1);
     currentIndex--;
-    array = newArray;
   }
   
   /**
