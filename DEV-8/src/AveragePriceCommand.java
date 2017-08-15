@@ -19,7 +19,7 @@ public class AveragePriceCommand implements Command {
    */
   @Override
   public void execute() {
-    System.out.println(this.averagePrice());
+    System.out.println("Average price of all products : " + this.averagePrice());
   }
 
   /**
