@@ -1,7 +1,5 @@
 import org.junit.Test;
-
 import java.math.BigDecimal;
-
 import static org.junit.Assert.*;
 
 public class AveragePriceTypeCommandTest {
@@ -13,5 +11,4 @@ public class AveragePriceTypeCommandTest {
     dataBase.add(new Product("thirdType", "name", 4, new BigDecimal("3.0")));
     assertTrue(new BigDecimal("2.2").compareTo(new AveragePriceTypeCommand(dataBase).averagePrice("firstType")) == 0);
   }
-
 }
