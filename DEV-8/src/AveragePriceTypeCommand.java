@@ -19,7 +19,7 @@ public class AveragePriceTypeCommand implements Command {
   @Override
   public void execute() {
     System.out.println("Press type :");
-    System.out.println(this.averagePrice(new Scanner(System.in).nextLine()));
+    System.out.println("Average price of products of entered type : " + this.averagePrice(new Scanner(System.in).nextLine()));
   }
 
   /**
