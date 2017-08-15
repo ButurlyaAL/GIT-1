@@ -18,7 +18,7 @@ public class CountAllCommand implements Command {
    */
   @Override
   public void execute() {
-    System.out.println(this.amount());
+    System.out.println("Amount of all products : " + this.amount());
   }
 
   /**
