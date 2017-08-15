@@ -20,7 +20,7 @@ public class CountTypesCommand implements Command {
    */
   @Override
   public void execute() {
-    System.out.println(dataBase.getAllData().size());
+    System.out.println("Amount of types : " + dataBase.getAllData().size());
   }
 
   @Override
