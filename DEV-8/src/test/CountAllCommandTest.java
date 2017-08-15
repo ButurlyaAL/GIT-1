@@ -1,7 +1,5 @@
 import org.junit.Test;
-
 import java.math.BigDecimal;
-
 import static org.junit.Assert.*;
 
 public class CountAllCommandTest {
@@ -13,5 +11,4 @@ public class CountAllCommandTest {
     dataBase.add(new Product("thirdType", "name", 4, new BigDecimal("3.0")));
     assertEquals(9, new CountAllCommand(dataBase).amount());
   }
-
 }
