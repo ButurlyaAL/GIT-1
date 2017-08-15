@@ -1,6 +1,5 @@
 import java.math.BigDecimal;
 import java.util.LinkedList;
-
 import static org.junit.Assert.*;
 
 public class DataBaseTest {
