@@ -31,7 +31,9 @@ public class CommandBuilder {
   }
 
   private Command selectCommand(Command command, String name) {
-    if (command.getName().equals(name)) {
+    if (command == null) {
+      throw new IllegalArgumentException("There is no such command. Try again :");
+    } else if (command.getName().equals(name)) {
       return command;
     } else {
       return this.selectCommand(command.getNext(), name);
