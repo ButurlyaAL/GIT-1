@@ -31,6 +31,9 @@ public class Menu {
       } catch (NullPointerException firstException) {
         System.out.println("There is no such type.");
         this.run();
+      } catch (IllegalArgumentException secondException) {
+        System.out.println(secondException.getMessage());
+        this.run();
       }
     } while (true);
   }
