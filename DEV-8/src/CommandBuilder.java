@@ -26,7 +26,7 @@ public class CommandBuilder {
   }
 
   /**
-   * Makes oreder in chain of commands.
+   * Makes hashMap of commands.
    */
   private void buildMap() {
     commands.put(firstCommand.getName(),firstCommand);
