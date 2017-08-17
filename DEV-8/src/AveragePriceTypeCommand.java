@@ -6,10 +6,8 @@ import java.util.Scanner;
  */
 public class AveragePriceTypeCommand implements Command {
   private final String name = "4";
-  private Command next;
   private DataBase dataBase;
   public AveragePriceTypeCommand(DataBase dataBase) {
-    next = null;
     this.dataBase = dataBase;
   }
 
@@ -32,17 +30,7 @@ public class AveragePriceTypeCommand implements Command {
     for (Product product : dataBase.getDataAboutType(type)) {
       averagePrice = averagePrice.add(product.getPrice());
     }
-   return averagePrice.divide(new BigDecimal(dataBase.getDataAboutType(type).size()));
-  }
-
-  @Override
-  public void setNext(Command command) {
-    this.next = command;
-  }
-
-  @Override
-  public Command getNext() {
-    return this.next;
+    return averagePrice.divide(new BigDecimal(dataBase.getDataAboutType(type).size()));
   }
 
   @Override

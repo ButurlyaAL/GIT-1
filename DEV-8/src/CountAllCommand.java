@@ -5,11 +5,9 @@ import java.util.LinkedList;
  */
 public class CountAllCommand implements Command {
   private final String name = "2";
-  private Command next;
   private DataBase dataBase;
 
   public CountAllCommand(DataBase dataBase) {
-    next = null;
     this.dataBase = dataBase;
   }
 
@@ -33,16 +31,6 @@ public class CountAllCommand implements Command {
       }
     }
     return amount;
-  }
-
-  @Override
-  public void setNext(Command command) {
-    this.next = command;
-  }
-
-  @Override
-  public Command getNext() {
-    return this.next;
   }
 
   @Override

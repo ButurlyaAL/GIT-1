@@ -1,7 +1,10 @@
+import java.util.HashMap;
+
 /**
  * Select command to execute.
  */
 public class CommandBuilder {
+  private HashMap<String,Command> commands;
   private Command firstCommand;
   private Command secondCommand;
   private Command thirdCommand;
@@ -13,39 +16,34 @@ public class CommandBuilder {
    * @param dataBase
    */
   public CommandBuilder(DataBase dataBase) {
+    commands = new HashMap<>();
     firstCommand = new CountTypesCommand(dataBase);
     secondCommand = new CountAllCommand(dataBase);
     thirdCommand = new AveragePriceCommand(dataBase);
     fourthCommand = new AveragePriceTypeCommand(dataBase);
     fifthCommand = new ExitCommand();
+    this.buildMap();
   }
 
   /**
    * Makes oreder in chain of commands.
    */
-  private void buildOrder() {
-    firstCommand.setNext(secondCommand);
-    secondCommand.setNext(thirdCommand);
-    thirdCommand.setNext(fourthCommand);
-    fourthCommand.setNext(fifthCommand);
+  private void buildMap() {
+    commands.put(firstCommand.getName(),firstCommand);
+    commands.put(secondCommand.getName(),secondCommand);
+    commands.put(thirdCommand.getName(),thirdCommand);
+    commands.put(fourthCommand.getName(),fourthCommand);
+    commands.put(fifthCommand.getName(),fifthCommand);
   }
-
-  private Command selectCommand(Command command, String name) {
-    if (command == null) {
-      throw new IllegalArgumentException("There is no such command. Try again :");
-    } else if (command.getName().equals(name)) {
-      return command;
-    } else {
-      return this.selectCommand(command.getNext(), name);
-    }
-  }
-
   /**
    * @param name of command
    * @return command with the name.
    */
   public Command build(String name) {
-    buildOrder();
-    return selectCommand(firstCommand, name);
+    if (commands.containsKey(name)) {
+      return commands.get(name);
+    } else {
+      throw new IllegalArgumentException("There is no such command.Try again.");
+    }
   }
 }

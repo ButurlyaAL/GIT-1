@@ -6,11 +6,9 @@ import java.math.BigDecimal;
  */
 public class AveragePriceCommand implements Command {
   private final String name = "3";
-  private Command next;
   private DataBase dataBase;
 
   public AveragePriceCommand(DataBase dataBase) {
-    next = null;
     this.dataBase = dataBase;
   }
 
@@ -36,16 +34,6 @@ public class AveragePriceCommand implements Command {
       amount += products.size();
     }
     return averagePrice.divide(new BigDecimal(amount));
-  }
-
-  @Override
-  public void setNext(Command command) {
-    this.next = command;
-  }
-
-  @Override
-  public Command getNext() {
-    return this.next;
   }
 
   @Override
