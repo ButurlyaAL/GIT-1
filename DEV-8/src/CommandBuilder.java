@@ -35,6 +35,7 @@ public class CommandBuilder {
     commands.put(fourthCommand.getName(),fourthCommand);
     commands.put(fifthCommand.getName(),fifthCommand);
   }
+  
   /**
    * @param name of command
    * @return command with the name.
