@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.util.regex.Pattern;
 
 /**
  * Representation of product.
@@ -45,16 +46,12 @@ public class Product {
   }
 
   private boolean verify(String type, String name, int amount, BigDecimal price) {
-    return (isNotNumber(type) && isNotNumber(name)) && amount > 0 && priceIsPositive(price) && (type != "" && name != "");
+    return (isCorrect(type) && isCorrect(name)) && amount > 0 && priceIsPositive(price);
   }
 
-  private boolean isNotNumber(String value) {
-    try {
-      int number = Integer.valueOf(value);
-    } catch (Exception exception) {
-      return true;
-    }
-    return false;
+  private boolean isCorrect(String value) {
+   Pattern pattern = Pattern.compile("^(\\d*|\\W*)$");
+   return !pattern.matcher(value).matches();
   }
 
   private boolean priceIsPositive(BigDecimal price) {
