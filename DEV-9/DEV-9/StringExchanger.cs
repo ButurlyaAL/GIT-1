@@ -8,7 +8,6 @@ namespace DEV_9
   /// <summary>
   /// Class wich inserts sub strings to strings.
   /// </summary>
- 
   class StringExchanger
   {
     private Random random;
