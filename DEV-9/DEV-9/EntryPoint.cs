@@ -20,8 +20,7 @@ namespace DEV_9
       Console.WriteLine("Source first string : " + firstString);
       Console.WriteLine("Source second string : " + secondString);
       Console.WriteLine("Changed first string : " + strExchanger.InsertSubStringInString(firstString, strExchanger.RandomSubStringFromString(secondString)));
-      Console.WriteLine("Changed second string : " + strExchanger.InsertSubStringInString(secondString, strExchanger.RandomSubStringFromString(firstString)));
-      
+      Console.WriteLine("Changed second string : " + strExchanger.InsertSubStringInString(secondString, strExchanger.RandomSubStringFromString(firstString)));      
     }
   }
 }
