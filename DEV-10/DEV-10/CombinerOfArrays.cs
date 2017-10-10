@@ -52,7 +52,7 @@ namespace DEV_10
        }
        for (int i = 0; i < array.Length - 1; i ++)
        {                
-         if(this.CompareDoubles(array[i], array[i + 1]) && !result.Contains(array[i]))
+         if (this.CompareDoubles(array[i], array[i + 1]) && !result.Contains(array[i]))
          {
            result.Add(array[i]);     
          }
