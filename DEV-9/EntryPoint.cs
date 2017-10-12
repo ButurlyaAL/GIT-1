@@ -17,10 +17,15 @@ namespace DEV_9
       Console.WriteLine("Enter second string : ");
       string secondString = Console.ReadLine();
       StringExchanger strExchanger = new StringExchanger();
-      Console.WriteLine("Source first string : " + firstString);
-      Console.WriteLine("Source second string : " + secondString);
-      Console.WriteLine("Changed first string : " + strExchanger.InsertSubStringInString(firstString, strExchanger.RandomSubStringFromString(secondString)));
-      Console.WriteLine("Changed second string : " + strExchanger.InsertSubStringInString(secondString, strExchanger.RandomSubStringFromString(firstString)));      
+      try
+      {
+        Console.WriteLine("Changed first string : " + strExchanger.InsertSubStringInString(firstString, strExchanger.RandomSubStringFromString(secondString)));
+        Console.WriteLine("Changed second string : " + strExchanger.InsertSubStringInString(secondString, strExchanger.RandomSubStringFromString(firstString)));
+      }
+      catch (ArgumentException exception)
+      {
+        Console.WriteLine(exception.Message);
+      }
     }
   }
 }

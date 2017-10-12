@@ -28,6 +28,10 @@ namespace DEV_9
     /// <returns>Source string with subSting in it.</returns>
     public string InsertSubStringInString(string str, string subString)
     {
+      if (str.Length == 0)
+      {
+        throw new ArgumentException("One of the strings is empty.");
+      }
       int begin = random.Next(0, str.Length - 1);
       int end = random.Next(begin, str.Length - 1);
       char[] arrayOfString = new char[str.Length + (subString.Length - (end - begin))];
@@ -35,12 +39,12 @@ namespace DEV_9
 
       for (int i = 0; i < begin; i++)
       {
-        arrayOfString[i] = str[i];
+        arrayOfString[count] = str[i];
         count++;
       }
-      for (int i = begin,j = 0; j < subString.Length; i++, j++)
+      for (int j = 0; j < subString.Length; j++)
       {
-        arrayOfString[i] = subString[j];
+        arrayOfString[count] = subString[j];
         count++;
       }
       for (int i = end; i < str.Length; i++)
