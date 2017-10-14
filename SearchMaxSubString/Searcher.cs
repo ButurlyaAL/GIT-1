@@ -18,17 +18,17 @@ namespace SearchMaxSubString
     /// <returns>Sub string  with maximum length.</returns>
     public string GetMaxCommonSubString(string firstString, string secondString)
     { 
-      List<string> resultString = new List<string>();
+      List<string> resultArrayOfStrings = new List<string>();
       for (int i = 0, j = 0; i < secondString.Length; i++)
       {
         j = 1;
         while (i + j <= secondString.Length && SearchSubString(secondString.Substring(i, j), firstString) != 0)
         { 
-          resultString.Add(secondString.Substring(i,j));
+          resultArrayOfStrings.Add(secondString.Substring(i,j));
           j++;
         }
       }
-      return this.GetMaxString(resultString);
+      return this.GetMaxString(resultArrayOfStrings);
     }
 
     /// <summary>
