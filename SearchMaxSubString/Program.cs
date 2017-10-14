@@ -14,7 +14,7 @@ namespace SearchMaxSubString
       {
         Console.WriteLine(seatcher.GetMaxCommonSubString("rhhfghSAMt", "teSAMfghte"));
       } 
-      catch (Exception exception)
+      catch (ArgumentOutOfRangeException exception)
       {
         Console.WriteLine("No matches.");
       }
