@@ -48,12 +48,10 @@ namespace DEV_11
           result.Append("");
           continue;
         }
-
         if (i + maxLengthOfSymbol > text.Length)
         {
           maxLengthOfSymbol = text.Length - i;
         }
-
         //Recognizes symbol.
         while (!dictionary.ContainsKey(symbol.ToString()))
         {
@@ -61,7 +59,6 @@ namespace DEV_11
           symbol.Append(text.Substring(i, maxLengthOfSymbol));
           maxLengthOfSymbol--;
         }
-
         result.Append(dictionary[symbol.ToString()]);
         i += maxLengthOfSymbol;
       }
