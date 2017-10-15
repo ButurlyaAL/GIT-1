@@ -36,10 +36,8 @@ namespace DEV_11
         patternForValue = "[A-Za-z]*";
         
       }
-
       Dictionary<string, string> dictionary = new Dictionary<string, string>();
-      string[] lines= File.ReadAllLines(path, Encoding.Default);
-      
+      string[] lines= File.ReadAllLines(path, Encoding.Default);     
       for (int i = 0; i < lines.Length; i++)
       { 
         dictionary.Add(Regex.Replace(lines[i], patternForKey, ""), Regex.Replace(lines[i], patternForValue, ""));
