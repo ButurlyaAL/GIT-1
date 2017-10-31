@@ -11,7 +11,9 @@ namespace SortFile
   /// </summary>
   class FileSorter
   {
-    private FileStream fileStream; 
+    private FileStream fileStream;
+    private static const char firstEndOfFileSymbol = '\r';
+    private static const char secondEndOfFileSymbol = '\n';
 
     /// <summary>
     /// Returns string from file.
@@ -21,7 +23,7 @@ namespace SortFile
     {
       StringBuilder line = new StringBuilder();
       char symbol;
-      while ((symbol = (char)fileStream.ReadByte()) != '\r' || (symbol = (char)fileStream.ReadByte()) != '\n')
+      while ((symbol = (char)fileStream.ReadByte()) != firstEndOfFileSymbol || (symbol = (char)fileStream.ReadByte()) != secondEndOfFileSymbol)
       {
         if (fileStream.Position == fileStream.Length)
         {
