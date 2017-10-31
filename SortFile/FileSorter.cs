@@ -44,6 +44,7 @@ namespace SortFile
       {
         string previousString = String.Empty;
         string currentString = String.Empty;
+        string lineToWrite = String.Empty;
         bool wasChanged = false;
 
         do
