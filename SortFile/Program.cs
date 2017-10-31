@@ -14,7 +14,14 @@ namespace SortFile
     static void Main(string[] args)
     {
       FileSorter sorter = new FileSorter();
-      sorter.SortStringsInFile(Path.GetFullPath(@"..\\..\\File.txt"));
+      try
+      {
+        sorter.SortStringsInFile(Path.GetFullPath(@"..\\..\\Ftile.txt"));
+      }
+      catch (FileNotFoundException exception)
+      {
+        Console.WriteLine("File not found.");
+      }
     }
   }
 }

@@ -12,8 +12,8 @@ namespace SortFile
   class FileSorter
   {
     private FileStream fileStream;
-    private static const char firstEndOfFileSymbol = '\r';
-    private static const char secondEndOfFileSymbol = '\n';
+    private static char firstEndOfFileSymbol = '\r';
+    private static char secondEndOfFileSymbol = '\n';
 
     /// <summary>
     /// Returns string from file.
@@ -40,7 +40,7 @@ namespace SortFile
     /// <param name="path">Path of file to sort.</param>
     public void SortStringsInFile(string path)
     {
-      using (fileStream = new FileStream(path, FileMode.OpenOrCreate))
+      using (fileStream = new FileStream(path, FileMode.Open, FileAccess.ReadWrite))
       {
         string previousString = String.Empty;
         string currentString = String.Empty;
