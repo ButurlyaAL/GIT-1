@@ -53,8 +53,8 @@ namespace SortFile
           {
             if (String.Compare(previousString, currentString) > 0)
             {
-              this.ReplaceStrings(previousString, currentString);
-              wasChanged = true;
+              lineToWrite = GetLineToWrite(previousString, currentString);
+              WriteLine(lineToWrite); 
             }
             else
             {
@@ -72,17 +72,23 @@ namespace SortFile
     /// </summary>
     /// <param name="firstString">First string</param>
     /// <param name="secondString">Second string.</param>
-    private void ReplaceStrings(string firstString, string secondString)
+    private string GetLineToWrite(string firstString, string secondString)
     {
-      byte[] space = Encoding.Default.GetBytes("\r\n");
-      byte[] bytesOfFirstString = Encoding.Default.GetBytes(firstString);
-      byte[] bytesOfSecondString = Encoding.Default.GetBytes(secondString);
-      
-      fileStream.Seek(-(bytesOfFirstString.Length + bytesOfSecondString.Length + space.Length * 2), SeekOrigin.Current);   
-      fileStream.Write(bytesOfSecondString, 0, bytesOfSecondString.Length);    
-      fileStream.Write(space, 0, space.Length);  
-      fileStream.Write(bytesOfFirstString, 0, bytesOfFirstString.Length);
-      fileStream.Write(space, 0, space.Length);     
+      StringBuilder lineToWrite = new StringBuilder(secondString);
+      lineToWrite.Append(firstEndOfFileSymbol);
+      lineToWrite.Append(secondEndOfFileSymbol);
+      lineToWrite.Append(firstString);
+      lineToWrite.Append(firstEndOfFileSymbol);
+      lineToWrite.Append(secondEndOfFileSymbol);
+
+      return lineToWrite.ToString();    
+    }
+
+    private void WriteLine(string lineToWrite)
+    {
+      byte[] bytesOfLineToWrite = Encoding.Default.GetBytes(lineToWrite);
+      fileStream.Seek(-(bytesOfLineToWrite.Length), SeekOrigin.Current);
+      fileStream.Write(bytesOfLineToWrite, 0, bytesOfLineToWrite.Length);
     }
   }
 }
