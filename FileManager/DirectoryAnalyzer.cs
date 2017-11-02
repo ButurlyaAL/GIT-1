@@ -34,7 +34,7 @@ namespace FileManager
     {
       StringBuilder result = new StringBuilder();
 
-      result.Append("Path of file :").Append(path).Append(", ");
+      result.Append("Path of file :");
       result.Append(path).Append(",");
       result.Append("Creation time of file :");
       result.Append(File.GetCreationTime(path)).Append(", ");
