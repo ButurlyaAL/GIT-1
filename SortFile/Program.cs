@@ -16,7 +16,7 @@ namespace SortFile
       FileSorter sorter = new FileSorter();
       try
       {
-        sorter.SortStringsInFile(Path.GetFullPath(@"..\\..\\Ftile.txt"));
+        sorter.SortStringsInFile(Path.GetFullPath(@"..\\..\\File.txt"));
       }
       catch (FileNotFoundException exception)
       {
