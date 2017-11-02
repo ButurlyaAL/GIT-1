@@ -15,9 +15,12 @@ namespace FileManager
       Console.WriteLine("Please enter path of directory :");
       string direcoryPath = Console.ReadLine();
 
-      DirectoryAnalyzer analyzer = new DirectoryAnalyzer();
+      DirectoryAnalyzer analyzer = new DirectoryAnalyzer(direcoryPath);
       Console.WriteLine("Information about directory :");
-      Console.WriteLine(analyzer.GetInformationAboutDirectory(direcoryPath));
+      while (analyzer.DirectoryHasNextFile())
+      {
+        Console.WriteLine(analyzer.GetInformationAboutNextFile());
+      }
     }
   }
 }

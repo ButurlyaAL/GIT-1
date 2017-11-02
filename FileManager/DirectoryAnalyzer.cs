@@ -11,40 +11,40 @@ namespace FileManager
   /// </summary>
   class DirectoryAnalyzer
   {
-    private FileInfo fileInfo;  
+    private string[] pathesOfFiles;
+    private int count;
+
+    public DirectoryAnalyzer(string directoryPath)
+    {
+      pathesOfFiles = Directory.GetFiles(directoryPath);
+      count = 0;
+    }
 
     /// <summary>
-    /// Retuns string with information about files in directory.
+    /// Returns information about existing of next file in directory.
     /// </summary>
-    /// <param name="directoryPath">Path of direcory</param>
-    /// <returns>String with information.</returns>
-    public string GetInformationAboutDirectory(string directoryPath)
+    /// <returns>True if directory has next file.False otherwise.</returns>
+    public bool DirectoryHasNextFile()
     {
-      StringBuilder result = new StringBuilder();
-      string[] pathesOfFiles = Directory.GetFiles(directoryPath);
-      for (int i = 0; i < pathesOfFiles.Length; i++)
-      {
-        fileInfo = new FileInfo(pathesOfFiles[i]);
-        result.AppendLine(GetInformationAboutFile(pathesOfFiles[i]));
-      }
-      return result.ToString();
+      return count < pathesOfFiles.Length;
     }
 
-    private string GetInformationAboutFile(string path)
+    /// <summary>
+    /// Returns information about next file.
+    /// </summary>
+    /// <returns>String with information about next file.</returns>
+    public string GetInformationAboutNextFile()
     {
       StringBuilder result = new StringBuilder();
-
-      result.Append("Path of file :").Append(path).Append(", ");
-      result.Append(path).Append(",");
+      FileInfo fileInfo = new FileInfo(pathesOfFiles[count]);
+      result.Append("Path of file :");
+      result.Append(pathesOfFiles[count]).Append(",");
       result.Append("Creation time of file :");
-      result.Append(File.GetCreationTime(path)).Append(", ");
+      result.Append(File.GetCreationTime(pathesOfFiles[count])).Append(", ");
       result.Append("Size of file : ");
       result.Append(fileInfo.Length).Append(" bytes");
-
+      count++;
       return result.ToString();
     }
-
-      
-    
   }
 }
