@@ -43,8 +43,5 @@ namespace FileManager
 
       return result.ToString();
     }
-
-      
-    
   }
 }
