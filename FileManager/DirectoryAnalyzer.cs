@@ -14,6 +14,7 @@ namespace FileManager
     private string[] pathesOfFiles;
     private int count;
 
+
     public DirectoryAnalyzer(string directoryPath)
     {
       pathesOfFiles = Directory.GetFiles(directoryPath);
