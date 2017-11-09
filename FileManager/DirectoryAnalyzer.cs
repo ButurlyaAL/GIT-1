@@ -11,6 +11,8 @@ namespace FileManager
   /// </summary>
   class DirectoryAnalyzer
   {
+    private List<string> pathesOfFiles;
+
     /// <summary>
     /// Returns information about files in directory and sub directories.
     /// </summary>
@@ -22,12 +24,12 @@ namespace FileManager
       int countOfDirectories = 0;
       List<string> result = new List<string>();
       List<string> pathesOfDirectories = Directory.GetDirectories(directoryPath).ToList();
-      List<string> pathesOfFiles = Directory.GetFiles(directoryPath).ToList();
+      pathesOfFiles = Directory.GetFiles(directoryPath).ToList();
       do
       {
         while (countOfFiles < pathesOfFiles.Count)
         {
-          result.Add(GetInformationAboutNextFile(countOfFiles, pathesOfFiles));
+          result.Add(GetInformationAboutNextFile(countOfFiles));
           countOfFiles++;
         }
         if (pathesOfDirectories.Count != 0)
@@ -39,7 +41,7 @@ namespace FileManager
       return result;
     }
 
-    private string GetInformationAboutNextFile(int countOfFiles, List<string> pathesOfFiles)
+    private string GetInformationAboutNextFile(int countOfFiles)
     {
       StringBuilder result = new StringBuilder();
       FileInfo fileInfo = new FileInfo(pathesOfFiles[countOfFiles]);
@@ -49,7 +51,6 @@ namespace FileManager
       result.Append(File.GetCreationTime(pathesOfFiles[countOfFiles])).Append(", ");
       result.Append("Size of file : ");
       result.Append(fileInfo.Length).Append(" bytes");
-      count++;
       return result.ToString();
     }
   }

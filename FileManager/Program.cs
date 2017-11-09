@@ -18,7 +18,7 @@ namespace FileManager
       DirectoryAnalyzer analyzer = new DirectoryAnalyzer();
       Console.WriteLine("Information about directory :");
       List<string> informationAboutDirectory = analyzer.GetInformationAboutDirectory(direcoryPath);
-      foreach (string informationAboutFile in InformationAboutDirectory)
+      foreach (string informationAboutFile in informationAboutDirectory)
       {
         Console.WriteLine(informationAboutFile);
       }
