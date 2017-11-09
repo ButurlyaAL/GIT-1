@@ -18,37 +18,42 @@ namespace FileManager
     /// </summary>
     /// <param name="directoryPath">Path of directory.</param>
     /// <returns>List of strings with iformation about files in directory and sub dirctories.</returns>
-    public List<string> GetInformationAboutDirectory(string directoryPath)
-    {
-      int countOfFiles = 0;
-      int countOfDirectories = 0;
+    public List<string> GetFullInformationAboutDirectory(string directoryPath)
+    {    
+      int numberOfDirectory = 0;
       List<string> result = new List<string>();
       List<string> pathesOfDirectories = Directory.GetDirectories(directoryPath).ToList();
       pathesOfFiles = Directory.GetFiles(directoryPath).ToList();
-      do
+
+      result.AddRange(GetInformationAboutFilesInDirectory(directoryPath));
+      while (pathesOfDirectories.Count != 0 && numberOfDirectory < pathesOfDirectories.Count)
       {
-        while (countOfFiles < pathesOfFiles.Count)
-        {
-          result.Add(GetInformationAboutNextFile(countOfFiles));
-          countOfFiles++;
-        }
-        if (pathesOfDirectories.Count != 0)
-        {
-          result.AddRange(GetInformationAboutDirectory(pathesOfDirectories[countOfDirectories]));
-          countOfDirectories++;
-        }
-      } while (countOfDirectories < pathesOfDirectories.Count);
+        result.AddRange(GetFullInformationAboutDirectory(pathesOfDirectories[numberOfDirectory]));
+        numberOfDirectory++;
+      }
       return result;
     }
 
-    private string GetInformationAboutNextFile(int countOfFiles)
+    private List<string> GetInformationAboutFilesInDirectory(string directoryPath)
+    {
+      int numberOfFile = 0;
+      List<string> result = new List<string>();
+      while (numberOfFile < pathesOfFiles.Count)
+      {
+        result.Add(GetInformationAboutFile(numberOfFile));
+        numberOfFile++;
+      }
+      return result;
+    }
+
+    private string GetInformationAboutFile(int numberOfFile)
     {
       StringBuilder result = new StringBuilder();
-      FileInfo fileInfo = new FileInfo(pathesOfFiles[countOfFiles]);
+      FileInfo fileInfo = new FileInfo(pathesOfFiles[numberOfFile]);
       result.Append("Path of file :");
-      result.Append(pathesOfFiles[countOfFiles]).Append(",");
+      result.Append(pathesOfFiles[numberOfFile]).Append(",");
       result.Append("Creation time of file :");
-      result.Append(File.GetCreationTime(pathesOfFiles[countOfFiles])).Append(", ");
+      result.Append(File.GetCreationTime(pathesOfFiles[numberOfFile])).Append(", ");
       result.Append("Size of file : ");
       result.Append(fileInfo.Length).Append(" bytes");
       return result.ToString();
