@@ -12,6 +12,7 @@ namespace FileManager
   class DirectoryAnalyzer
   {
     private List<string> pathesOfFiles;
+  
 
     /// <summary>
     /// Returns information about files in directory and sub directories.
@@ -19,25 +20,23 @@ namespace FileManager
     /// <param name="directoryPath">Path of directory.</param>
     /// <returns>List of strings with iformation about files in directory and sub dirctories.</returns>
     public List<string> GetFullInformationAboutDirectory(string directoryPath)
-    {    
-      int numberOfDirectory = 0;
+    {       
       List<string> result = new List<string>();
       List<string> pathesOfDirectories = Directory.GetDirectories(directoryPath).ToList();
       pathesOfFiles = Directory.GetFiles(directoryPath).ToList();
 
       result.AddRange(GetInformationAboutFilesInDirectory());
-      while (pathesOfDirectories.Count != 0 && numberOfDirectory < pathesOfDirectories.Count)
+      foreach (string pathOfDirectory in pathesOfDirectories)
       {
-        result.AddRange(GetFullInformationAboutDirectory(pathesOfDirectories[numberOfDirectory]));
-        numberOfDirectory++;
-      }
+        result.AddRange(GetFullInformationAboutDirectory(pathOfDirectory));
+      }  
       return result;
     }
 
     private List<string> GetInformationAboutFilesInDirectory()
     {     
       List<string> result = new List<string>();
-      foreach(string filePath in pathesOfFiles)
+      foreach (string filePath in pathesOfFiles)
       {
         result.Add(GetInformationAboutFile(filePath));
       } 
