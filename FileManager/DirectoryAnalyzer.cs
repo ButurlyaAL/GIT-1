@@ -11,30 +11,35 @@ namespace FileManager
   /// </summary>
   class DirectoryAnalyzer
   {
-    private string[] pathesOfFiles;
-    private int count;
-
-
-    public DirectoryAnalyzer(string directoryPath)
+    /// <summary>
+    /// Returns information about files in directory and sub directories.
+    /// </summary>
+    /// <param name="directoryPath">Path of directory.</param>
+    /// <returns>List of strings with iformation about files in directory and sub dirctories.</returns>
+    public List<string> GetInformationAboutDirectory(string directoryPath)
     {
-      pathesOfFiles = Directory.GetFiles(directoryPath);
-      count = 0;
+      int countOfFiles = 0;
+      int countOfDirectories = 0;
+      List<string> result = new List<string>();
+      List<string> pathesOfDirectories = Directory.GetDirectories(directoryPath).ToList();
+      List<string> pathesOfFiles = Directory.GetFiles(directoryPath).ToList();
+      do
+      {
+        while (countOfFiles < pathesOfFiles.Count)
+        {
+          result.Add(GetInformationAboutNextFile(countOfFiles, pathesOfFiles));
+          countOfFiles++;
+        }
+        if (pathesOfDirectories.Count != 0)
+        {
+          result.AddRange(GetInformationAboutDirectory(pathesOfDirectories[countOfDirectories]));
+          countOfDirectories++;
+        }
+      } while (countOfDirectories < pathesOfDirectories.Count);
+      return result;
     }
 
-    /// <summary>
-    /// Returns information about existing of next file in directory.
-    /// </summary>
-    /// <returns>True if directory has next file.False otherwise.</returns>
-    public bool DirectoryHasNextFile()
-    {
-      return count < pathesOfFiles.Length;
-    }
-
-    /// <summary>
-    /// Returns information about next file.
-    /// </summary>
-    /// <returns>String with information about next file.</returns>
-    public string GetInformationAboutNextFile()
+    private string GetInformationAboutNextFile()
     {
       StringBuilder result = new StringBuilder();
       FileInfo fileInfo = new FileInfo(pathesOfFiles[count]);
