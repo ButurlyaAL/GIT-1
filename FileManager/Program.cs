@@ -17,10 +17,10 @@ namespace FileManager
 
       DirectoryAnalyzer analyzer = new DirectoryAnalyzer();
       Console.WriteLine("Information about directory :");
-      List<string> InformationAboutDirectory = analyzer.GetInformationAboutDirectory(direcoryPath);
-      foreach (string InformationAboutFile in InformationAboutDirectory)
+      List<string> informationAboutDirectory = analyzer.GetInformationAboutDirectory(direcoryPath);
+      foreach (string informationAboutFile in InformationAboutDirectory)
       {
-        Console.WriteLine(InformationAboutFile);
+        Console.WriteLine(informationAboutFile);
       }
     }
   }
