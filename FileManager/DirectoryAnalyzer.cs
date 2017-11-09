@@ -39,14 +39,14 @@ namespace FileManager
       return result;
     }
 
-    private string GetInformationAboutNextFile()
+    private string GetInformationAboutNextFile(int countOfFiles, List<string> pathesOfFiles)
     {
       StringBuilder result = new StringBuilder();
-      FileInfo fileInfo = new FileInfo(pathesOfFiles[count]);
+      FileInfo fileInfo = new FileInfo(pathesOfFiles[countOfFiles]);
       result.Append("Path of file :");
-      result.Append(pathesOfFiles[count]).Append(",");
+      result.Append(pathesOfFiles[countOfFiles]).Append(",");
       result.Append("Creation time of file :");
-      result.Append(File.GetCreationTime(pathesOfFiles[count])).Append(", ");
+      result.Append(File.GetCreationTime(pathesOfFiles[countOfFiles])).Append(", ");
       result.Append("Size of file : ");
       result.Append(fileInfo.Length).Append(" bytes");
       count++;
