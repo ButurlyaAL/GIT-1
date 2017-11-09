@@ -25,7 +25,7 @@ namespace FileManager
       List<string> pathesOfDirectories = Directory.GetDirectories(directoryPath).ToList();
       pathesOfFiles = Directory.GetFiles(directoryPath).ToList();
 
-      result.AddRange(GetInformationAboutFilesInDirectory(directoryPath));
+      result.AddRange(GetInformationAboutFilesInDirectory());
       while (pathesOfDirectories.Count != 0 && numberOfDirectory < pathesOfDirectories.Count)
       {
         result.AddRange(GetFullInformationAboutDirectory(pathesOfDirectories[numberOfDirectory]));
@@ -34,26 +34,24 @@ namespace FileManager
       return result;
     }
 
-    private List<string> GetInformationAboutFilesInDirectory(string directoryPath)
-    {
-      int numberOfFile = 0;
+    private List<string> GetInformationAboutFilesInDirectory()
+    {     
       List<string> result = new List<string>();
-      while (numberOfFile < pathesOfFiles.Count)
+      foreach(string filePath in pathesOfFiles)
       {
-        result.Add(GetInformationAboutFile(numberOfFile));
-        numberOfFile++;
-      }
+        result.Add(GetInformationAboutFile(filePath));
+      } 
       return result;
     }
 
-    private string GetInformationAboutFile(int numberOfFile)
+    private string GetInformationAboutFile(string filePath)
     {
       StringBuilder result = new StringBuilder();
-      FileInfo fileInfo = new FileInfo(pathesOfFiles[numberOfFile]);
+      FileInfo fileInfo = new FileInfo(filePath);
       result.Append("Path of file :");
-      result.Append(pathesOfFiles[numberOfFile]).Append(",");
+      result.Append(filePath).Append(",");
       result.Append("Creation time of file :");
-      result.Append(File.GetCreationTime(pathesOfFiles[numberOfFile])).Append(", ");
+      result.Append(File.GetCreationTime(filePath)).Append(", ");
       result.Append("Size of file : ");
       result.Append(fileInfo.Length).Append(" bytes");
       return result.ToString();
