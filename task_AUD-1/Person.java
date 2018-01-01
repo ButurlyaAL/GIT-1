@@ -6,6 +6,7 @@ public class Person {
   private String firstName;
   private String lastName;
   private int age;
+  
   /**
    * Makes an exemplar of Person if all the fields are correct.
    */
@@ -15,6 +16,7 @@ public class Person {
     age = Integer.valueOf(information[2]);
     verify();
   }
+  
   private void verify() {
     if (!namesAreCorrect()) {
       throw new IllegalArgumentException("Wrong firstname or lastname");
@@ -23,6 +25,7 @@ public class Person {
       throw new NumberFormatException("Age isn't positive.");
     } 
   }
+  
   private boolean namesAreCorrect() {
     try {
       int number = Integer.valueOf(firstName);
@@ -32,6 +35,7 @@ public class Person {
     }
     return false;
   }
+  
   private boolean ageIsPositive() {
    return age >= 0;
   }
