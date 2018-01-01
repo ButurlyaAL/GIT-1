@@ -31,11 +31,11 @@ public class Reader {
    * @return true if user press "YES";false if user press "NO" or anything else.
    */
   public boolean requestForInput() {
-    System.out.println("If you want to enter information for one more person press YES,otherwise press NO."); 
+    System.out.println("If you want to enter information for one more person press YES,otherwise press anything else."); 
     switch (input.nextLine()) {
       case "YES":
         return true;
-      case "NO":
+      default:
         return false;
     }
     return false;
