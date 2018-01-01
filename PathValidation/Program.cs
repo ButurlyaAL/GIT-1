@@ -9,9 +9,8 @@ namespace PathValidation
   {
     static void Main(string[] args)
     {
-      PathValidator validator = new PathValidator("COM1");
+      PathValidator validator = new PathValidator(args[0]);
       Console.WriteLine(validator.IsValidPath());
-     
     }
   }
 }
