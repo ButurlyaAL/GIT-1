@@ -80,7 +80,7 @@ namespace PathValidation
 
     private bool IsValidLength()
     {
-      return path.Length > 0 && path.Length < 32767;
+      return path.Length < 32767;
     }
 
     private List<string> GetListOfNames()
@@ -117,4 +117,3 @@ namespace PathValidation
     }   
   }
 }
-
